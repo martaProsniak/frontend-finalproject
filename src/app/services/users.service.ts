@@ -8,16 +8,16 @@ import {UserList} from '../models/user-list';
 })
 export class UsersService {
 
-  apiUrlList = 'http://localhost:8080/users/';
+  apiUrl = 'http://localhost:8080/users/';
 
   constructor(private http: HttpClient) { }
 
   getUserList() {
     return this.http
-      .get<UserList>(this.apiUrlList);
+      .get<UserList>(this.apiUrl);
   }
   getUserDetails(id: number) {
     return this.http
-      .get<User>(this.apiUrlList + id);
+      .get<User>(this.apiUrl + id);
   }
 }

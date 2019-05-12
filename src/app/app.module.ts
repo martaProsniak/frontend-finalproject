@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {enableProdMode, NgModule} from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
@@ -7,13 +7,18 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { UsersListComponent } from './components/users-list/users-list.component';
 import {RouterModule, Routes} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
+import {environment} from '../environments/environment.prod';
 
 
 
 const appRoutes: Routes = [
   { path: 'users/:id', component: UserDetailsComponent, pathMatch: 'full' },
-  { path: 'users/list', component: UsersListComponent, pathMatch: 'full' }
+  { path: 'users', component: UsersListComponent, pathMatch: 'full' }
 ];
+
+if (environment.production) {
+  enableProdMode();
+}
 
 @NgModule({
   declarations: [

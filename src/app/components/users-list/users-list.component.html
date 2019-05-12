@@ -1,22 +1,20 @@
 <table class="table table-striped">
   <thead>
-  <th scope="col">Id</th>
-  <th scope="col">Name</th>
-  <th scope="col">Surname</th>
-  <th scope="col">Login</th>
-  <th scope="col">Accepted</th>
-  <th scope="col">Role</th>
-  <th scope="col">Cart</th>
+  <th scope="col">id</th>
+  <th scope="col">name</th>
+  <th scope="col">surname</th>
+  <th scope="col">login</th>
+  <th scope="col">accepted</th>
+  <th scope="col">role</th>
   </thead>
   <tbody>
   <tr *ngFor="let user of users">
-    <td>{{ user.Id }}</td>
-    <td>{{ user.Name}}</td>
-    <td>{{ user.Surname}}</td>
-    <td>{{ user.Login}}</td>
-    <td>{{ user.Accepted}}</td>
-    <td>{{ user.Role}}</td>
-    <td>{{ user.Cart}}</td>
+    <td>{{user.id }}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.surname}}</td>
+    <td>{{user.login}}</td>
+    <td>{{user.accepted}}</td>
+    <td>{{user.role}}</td>
   </tr>
   </tbody>
 </table>

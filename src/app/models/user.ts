@@ -1,9 +1,8 @@
 export class User {
-  Id: number;
-  Name: string;
-  Surname: string;
-  Login: string;
-  Accepted: boolean;
-  Role: any;
-  Cart: any;
+  id: number;
+  name: string;
+  surname: string;
+  login: string;
+  accepted: boolean;
+  role: any;
 }
