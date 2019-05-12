@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <thead>
+  <th scope="col">Id</th>
+  <th scope="col">Name</th>
+  <th scope="col">Surname</th>
+  <th scope="col">Login</th>
+  <th scope="col">Accepted</th>
+  <th scope="col">Role</th>
+  <th scope="col">Cart</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users">
+    <td>{{ user.Id }}</td>
+    <td>{{ user.Name}}</td>
+    <td>{{ user.Surname}}</td>
+    <td>{{ user.Login}}</td>
+    <td>{{ user.Accepted}}</td>
+    <td>{{ user.Role}}</td>
+    <td>{{ user.Cart}}</td>
+  </tr>
+  </tbody>
+</table>
