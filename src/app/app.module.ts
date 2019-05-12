@@ -7,7 +7,8 @@ import { UserDetailsComponent } from './components/user-details/user-details.com
 import { UsersListComponent } from './components/users-list/users-list.component';
 import {RouterModule, Routes} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
-import {environment} from '../environments/environment.prod';
+import { ProductsListComponent } from './components/products-list/products-list.component';
+import { ProductsDetailsComponent } from './components/products-details/products-details.component';
 
 
 
@@ -16,15 +17,14 @@ const appRoutes: Routes = [
   { path: 'users', component: UsersListComponent, pathMatch: 'full' }
 ];
 
-if (environment.production) {
-  enableProdMode();
-}
 
 @NgModule({
   declarations: [
     AppComponent,
     UserDetailsComponent,
-    UsersListComponent
+    UsersListComponent,
+    ProductsListComponent,
+    ProductsDetailsComponent
   ],
   imports: [
     BrowserModule,

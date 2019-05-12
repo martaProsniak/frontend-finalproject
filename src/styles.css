@@ -3,3 +3,31 @@ body {
   background-color: midnightblue;
   color: azure;
 }
+
+.main{
+  min-height: 500px;
+}
+
+.menu{
+  background-color: azure;
+  color: midnightblue;
+  min-height: 100px;
+  min-weight: 600px;
+  margin: 0px auto 10px auto;
+  font-family: "Manjari Bold";
+  font-size: 25px;
+  text-align: center;
+}
+
+footer {
+  background-color: azure;
+  color: midnightblue;
+  min-height: 75px;
+  min-weight: 600px;
+  margin: 10px auto 0px auto;
+  font-family: "Manjari Bold";
+  font-size: 25px;
+  text-align: center;
+}
+
+

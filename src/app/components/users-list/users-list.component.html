@@ -6,15 +6,21 @@
   <th scope="col">login</th>
   <th scope="col">accepted</th>
   <th scope="col">role</th>
+  <th scope="col">edit</th>
+  <th scope="col">activate</th>
+  <th scope="col">delete</th>
   </thead>
   <tbody>
   <tr *ngFor="let user of users">
-    <td>{{user.id }}</td>
+    <td>{{user.id}}</td>
     <td>{{user.name}}</td>
     <td>{{user.surname}}</td>
     <td>{{user.login}}</td>
     <td>{{user.accepted}}</td>
     <td>{{user.role}}</td>
+    <td>edit</td>
+    <td>activate</td>
+    <td>delete</td>
   </tr>
   </tbody>
 </table>
