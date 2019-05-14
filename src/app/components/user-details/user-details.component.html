@@ -1,20 +1,9 @@
-<table class="table table-striped">
-  <thead>
-  <th scope="col">id</th>
-  <th scope="col">name</th>
-  <th scope="col">surname</th>
-  <th scope="col">login</th>
-  <th scope="col">accepted</th>
-  <th scope="col">role</th>
-  </thead>
-  <tbody>
-  <tr>
-    <td>{{user.id}}</td>
-    <td>{{user.name}}</td>
-    <td>{{user.surname}}</td>
-    <td>{{user.login}}</td>
-    <td>{{user.accepted}}</td>
-    <td>{{user.role}}</td>
-  </tr>
-  </tbody>
-</table>
+<div class="user_details">
+  <h2>{{user.login | uppercase}}</h2>
+  <div><span>id: </span>{{user.id}}</div>
+  <div><span>name: </span>{{user.name}}</div>
+  <div><span>surname: </span>{{user.surname}}</div>
+  <div><span>login: </span>{{user.login}}</div>
+  <div><span>accepted: </span>{{user.accepted}}</div>
+  <div><span>role: </span>{{user.role}}</div>
+</div>

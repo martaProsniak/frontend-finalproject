@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  background-color: midnightblue;
-  color: azure;
+  background-color: darkgrey;
+  color: gray();
 }
 
 main{
@@ -9,8 +9,8 @@ main{
 }
 
 .banner{
-  background-color: azure;
-  color: midnightblue;
+  background-color: darkslateblue;
+  color: lightgrey;
   min-height: 100px;
   min-width: 500px;
   margin: 0px auto 10px auto;
@@ -47,8 +47,8 @@ nav ul li:hover {
 }
 
 footer {
-  background-color: azure;
-  color: midnightblue;
+  background-color: darkslateblue;
+  color: lightgrey;
   min-height: 75px;
   min-widht: 500px;
   margin: 0px auto 0px auto;
