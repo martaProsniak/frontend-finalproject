@@ -1,3 +1,30 @@
-<p>
-  user-edit works!
-</p>
+<div class="user_details">
+  <h2>{{user.login | uppercase}}</h2>
+  <div><span>id: </span>{{user.id}}</div>
+  <div>
+    <label>name:
+    <input [(ngModel)]="user.name" placeholder="name"/>
+  </label>
+  </div>
+  <div>
+    <label>surname:
+      <input [(ngModel)]="user.surname" placeholder="surname"/>
+    </label>
+  </div>
+  <div>
+    <label>login:
+      <input [(ngModel)]="user.login" placeholder="login"/>
+    </label>
+  </div>
+  <div>
+    <label>accepted?:
+      <input [(ngModel)]="user.accepted" placeholder="accepted"/>
+    </label>
+  </div>
+  <div>
+    <label>role:
+      <input [(ngModel)]="user.role" placeholder="role"/>
+    </label>
+  </div>
+  <button>save changes</button>
+</div>
