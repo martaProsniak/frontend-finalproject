@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {User} from '../models/user';
-import {UserList} from '../models/user-list';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +11,9 @@ export class UsersService {
 
   constructor(private http: HttpClient) { }
 
-  getUserList() {
+  getUsersTable() {
     return this.http
-      .get<UserList>(this.apiUrl);
+      .get<User[]>(this.apiUrl);
   }
   getUserDetails(id: number) {
     return this.http
