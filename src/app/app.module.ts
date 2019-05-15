@@ -5,11 +5,12 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
-import { UsersListComponent } from './components/users-list-admin/users-list.component';
+import { UsersListComponent } from './components/users-list/users-list.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
 import {UsersService} from './services/users.service';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {UsersService} from './services/users.service';
     AppComponent,
     UserDetailsComponent,
     UsersListComponent,
-    UserEditComponent
+    UserEditComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
