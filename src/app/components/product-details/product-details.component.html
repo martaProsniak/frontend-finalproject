@@ -1,0 +1,10 @@
+<article class="product_photo"><img [src]="product.url" alt=""></article>
+<div class="product_details">
+  <h2>{{product.name | uppercase}}</h2>
+  <div><span>id: </span>{{product.id}}</div>
+  <div><span>name: </span>{{product.name}}</div>
+  <div><span>descrption: </span>{{product.description}}</div>
+  <div><span>price: </span>{{product.price}}</div>
+  <div><span>available: </span>{{product.available}}</div>
+</div>
+<button (click)="goBack()">go back</button>

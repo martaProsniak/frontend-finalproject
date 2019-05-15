@@ -1,0 +1,22 @@
+<table class="table table-striped">
+  <thead>
+  <th scope="col">id</th>
+  <th scope="col">photo</th>
+  <th scope="col">name</th>
+  <th scope="col">description</th>
+  <th scope="col">price</th>
+  <th scope="col">available</th>
+  <th scope="col">details</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products">
+    <td>{{product.id}}</td>
+    <td><img [src]="product.url"></td>
+    <td>{{product.name}}</td>
+    <td>{{product.description}}</td>
+    <td>{{product.price}}</td>
+    <td>{{product.available}}</td>
+    <td><a routerLink="/products/{{product.id}}">display</a></td>
+  </tr>
+  </tbody>
+</table>

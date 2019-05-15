@@ -11,6 +11,7 @@ import {FormsModule} from '@angular/forms';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
 import {UsersService} from './services/users.service';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ProductListComponent } from './components/product-list/product-list.com
     UserDetailsComponent,
     UsersListComponent,
     UserEditComponent,
-    ProductListComponent
+    ProductListComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,
