@@ -9,7 +9,7 @@ import { UsersListComponent } from './components/users-list-admin/users-list.com
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
-
+import {UsersService} from './services/users.service';
 
 
 @NgModule({
@@ -17,7 +17,7 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
     AppComponent,
     UserDetailsComponent,
     UsersListComponent,
-    UserEditComponent,
+    UserEditComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +26,9 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    UsersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

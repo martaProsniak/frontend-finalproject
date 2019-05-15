@@ -22,6 +22,7 @@ export class UserEditComponent implements OnInit {
       .subscribe(result => {
         this.user = result;
       });
+
   }
 
 }
