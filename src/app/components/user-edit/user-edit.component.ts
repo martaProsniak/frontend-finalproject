@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {User} from '../../models/user';
 import {UsersService} from '../../services/users.service';
 import {ActivatedRoute} from '@angular/router';
+import { Location} from '@angular/common';
 
 @Component({
   selector: 'app-user-edit',
@@ -13,7 +14,8 @@ export class UserEditComponent implements OnInit {
   user: User = new User();
 
   constructor(private usersService: UsersService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private location: Location) { }
 
   ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
@@ -23,6 +25,19 @@ export class UserEditComponent implements OnInit {
         this.user = result;
       });
 
+  }
+
+  saveUserChanges() {
+    this.usersService.post(this.user)
+      .subscribe(
+        user => {
+          this.user = user;
+        }
+      );
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }

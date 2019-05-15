@@ -24,4 +24,9 @@ export class UsersService {
       .get<User>(this.apiUrl + id);
   }
 
+  post(user: User): Observable<any> {
+    return this.http.post(this.apiUrl + 'edit/:id', user);
+  }
+
+
 }
