@@ -12,6 +12,7 @@ import { UserEditComponent } from './components/user-edit/user-edit.component';
 import {UsersService} from './services/users.service';
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { UserAddComponent } from './components/user-add/user-add.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
     UsersListComponent,
     UserEditComponent,
     ProductListComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    UserAddComponent
   ],
   imports: [
     BrowserModule,

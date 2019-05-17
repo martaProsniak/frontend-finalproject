@@ -1,0 +1,15 @@
+<div>
+  <h2>Add new user</h2>
+  <div>
+    <label>Name:
+      <input [(ngModel)]="userData.user_name" placeholder="name"/>
+    </label><br>
+    <label>Surname:
+      <input [(ngModel)]="userData.user_surname" placeholder="surname"/>
+    </label><br>
+    <label>Price:
+      <input [(ngModel)]="userData.user_login" placeholder="login"/>
+    </label><br>
+  </div>
+  <button (click)="addUser()">Save</button>
+</div>
