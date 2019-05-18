@@ -11,11 +11,8 @@ import {catchError, tap} from 'rxjs/operators';
 export class UsersService {
 
   endpoint = 'http://localhost:8080/users';
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type':  'application/json'
-    })
-  };
+
+  headers = new HttpHeaders({'Content-Type':  'application/json'});
 
   constructor(private http: HttpClient) { }
 
@@ -32,23 +29,10 @@ export class UsersService {
     return this.http.post(this.endpoint + '/edit/:id', user);
   }
 
-  private extractData(res: Response) {
-    const body = res;
-    return body || { };
+  delete(user: User): Observable<any> {
+    return this.http.post(this.endpoint + '/delete/' + user.id, user);
   }
 
-  addUser(user): Observable<any> {
-    console.log(user);
-    return this.http.post<User>(this.endpoint + '/add', JSON.stringify(user), this.httpOptions).pipe(
-      // tslint:disable-next-line:no-shadowed-variable
-      tap((user) => console.log(`added user w/ id=${user.login}`))
-    );
-  }
-
-  signUp(user: User): Observable<User> {
-    const url = `${this.endpoint}/add`;
-    return this.http.post<User>(url, user);
-  }
 
 
 }
