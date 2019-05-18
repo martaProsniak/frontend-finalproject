@@ -1,0 +1,15 @@
+td a{
+  text-decoration: none;
+  color: #474647;
+}
+
+td a:hover{
+  text-decoration: none;
+  cursor: pointer;
+  color: #3ED682;
+}
+
+th {
+  background-color: #474647;
+  color: #3ED682;
+}
