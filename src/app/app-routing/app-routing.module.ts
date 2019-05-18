@@ -8,6 +8,7 @@ import {ProductListComponent} from '../components/product-list/product-list.comp
 import {ProductDetailsComponent} from '../components/product-details/product-details.component';
 import {UserAddComponent} from '../components/user-add/user-add.component';
 import {UserDeleteComponent} from '../components/user-delete/user-delete.component';
+import {UserActivationComponent} from '../components/user-activation/user-activation.component';
 
 
 const appRoutes: Routes = [
@@ -15,6 +16,8 @@ const appRoutes: Routes = [
   { path: 'users', component: UsersListComponent, pathMatch: 'full' },
   { path: 'users/edit/:id', component: UserEditComponent },
   { path: 'users/delete/:id', component: UserDeleteComponent },
+  { path: 'users/activate/:id', component: UserActivationComponent },
+  { path: 'users/deactivate/:id', component: UserActivationComponent },
   { path: 'users-register', component: UserAddComponent},
   { path: 'products', component: ProductListComponent, pathMatch: 'full' },
   { path: 'products/:id', component: ProductDetailsComponent, pathMatch: 'full' }

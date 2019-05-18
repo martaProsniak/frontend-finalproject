@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {User} from '../models/user';
 import {Observable} from 'rxjs';
-import {catchError, tap} from 'rxjs/operators';
 
 
 @Injectable({
@@ -26,11 +25,19 @@ export class UsersService {
   }
 
   post(user: User): Observable<any> {
-    return this.http.post(this.endpoint + '/edit/:id', user);
+    return this.http.post(this.endpoint + '/edit/' + user.id, user);
   }
 
   delete(user: User): Observable<any> {
     return this.http.post(this.endpoint + '/delete/' + user.id, user);
+  }
+
+  activate(user: User): Observable<any> {
+    return this.http.post(this.endpoint + '/activate/' + user.id, user);
+  }
+
+  deactivate(user: User): Observable<any> {
+    return this.http.post(this.endpoint + '/deactivate/' + user.id, user);
   }
 
 

@@ -12,7 +12,7 @@ import {User} from '../../models/user';
 export class UserDeleteComponent implements OnInit {
 
   user: User = new User();
-  message: string;
+  deleted = false;
 
   constructor(private usersService: UsersService,
               private route: ActivatedRoute,
@@ -32,7 +32,7 @@ export class UserDeleteComponent implements OnInit {
   }
 
   deleteUser(): void {
-    this.usersService.delete(this.user).subscribe(result => this.message = 'User deleted!');
+    this.usersService.delete(this.user).subscribe(result => this.deleted = true);
   }
 
 
