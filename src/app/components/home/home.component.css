@@ -1,0 +1,20 @@
+.main {
+  margin: 2em auto 2em auto;
+  display: flex;
+  height: 700px;
+  width: 960px;
+  text-align: center;
+  background-color: tomato;
+}
+
+.small {
+  height:350px;
+  width: 480px;
+
+}
+.big{
+  height:350px;
+  width: 480px;
+}
+
+

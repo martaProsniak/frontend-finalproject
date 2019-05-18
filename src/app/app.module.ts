@@ -15,6 +15,8 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { UserAddComponent } from './components/user-add/user-add.component';
 import { UserDeleteComponent } from './components/user-delete/user-delete.component';
 import { UserActivationComponent } from './components/user-activation/user-activation.component';
+import { HomeComponent } from './components/home/home.component';
+import {HomeService} from './services/home.service';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { UserActivationComponent } from './components/user-activation/user-activ
     ProductDetailsComponent,
     UserAddComponent,
     UserDeleteComponent,
-    UserActivationComponent
+    UserActivationComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { UserActivationComponent } from './components/user-activation/user-activ
     FormsModule
   ],
   providers: [
-    UsersService
+    UsersService,
+    HomeService
   ],
   bootstrap: [AppComponent]
 })

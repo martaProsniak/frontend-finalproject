@@ -13,6 +13,7 @@ export class UserAddComponent implements OnInit {
 
 
   user: User;
+  message: string;
 
   constructor( private location: Location,
                private usersService: UsersService,
@@ -29,6 +30,7 @@ export class UserAddComponent implements OnInit {
       .subscribe(
         user => {
           this.user = user;
+          this.message = 'Hello, ' + this.user.name + ', you\'re account has been created!';
         }
       );
   }

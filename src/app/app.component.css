@@ -19,6 +19,10 @@ main{
   text-align: center;
 }
 
+.banner:hover{
+  cursor: pointer;
+}
+
 nav{
   min-width: 500px;
   font-family: "Manjari Bold";

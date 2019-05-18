@@ -9,18 +9,20 @@ import {ProductDetailsComponent} from '../components/product-details/product-det
 import {UserAddComponent} from '../components/user-add/user-add.component';
 import {UserDeleteComponent} from '../components/user-delete/user-delete.component';
 import {UserActivationComponent} from '../components/user-activation/user-activation.component';
+import {HomeComponent} from '../components/home/home.component';
 
 
 const appRoutes: Routes = [
-  { path: 'users/:id', component: UserDetailsComponent, pathMatch: 'full' },
-  { path: 'users', component: UsersListComponent, pathMatch: 'full' },
+  { path: '', component: HomeComponent},
+  { path: 'users/:id', component: UserDetailsComponent},
+  { path: 'users', component: UsersListComponent},
   { path: 'users/edit/:id', component: UserEditComponent },
   { path: 'users/delete/:id', component: UserDeleteComponent },
   { path: 'users/activate/:id', component: UserActivationComponent },
   { path: 'users/deactivate/:id', component: UserActivationComponent },
   { path: 'users-register', component: UserAddComponent},
-  { path: 'products', component: ProductListComponent, pathMatch: 'full' },
-  { path: 'products/:id', component: ProductDetailsComponent, pathMatch: 'full' }
+  { path: 'products', component: ProductListComponent},
+  { path: 'products/:id', component: ProductDetailsComponent}
 ];
 
 @NgModule({
