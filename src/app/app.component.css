@@ -7,7 +7,7 @@ body {
 }
 
 main{
-  min-height: 750px;
+  min-height: 760px;
 }
 
 .banner{
@@ -108,7 +108,7 @@ footer {
   min-height: 75px;
   width: auto;
   margin: 0 auto 0 auto;
-  font-size: 1.5em;
+  font-size: 1.75em;
   text-align: center;
   clear: both;
 }
