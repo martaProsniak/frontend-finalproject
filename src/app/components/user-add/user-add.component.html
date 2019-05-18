@@ -1,6 +1,5 @@
 <div class="user_details">
-  <h2>{{user.login | uppercase}}</h2>
-  <div><span>id: </span>{{user.id}}</div>
+  <h2>Add new user</h2>
   <div>
     <label>name:
       <input [(ngModel)]="user.name" placeholder="name"/>
@@ -14,6 +13,11 @@
   <div>
     <label>login:
       <input [(ngModel)]="user.login" placeholder="login"/>
+    </label>
+  </div>
+  <div>
+    <label>password:
+      <input [(ngModel)]="user.password" placeholder="password"/>
     </label>
   </div>
   <div>

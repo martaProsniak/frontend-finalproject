@@ -28,7 +28,7 @@ export class UserEditComponent implements OnInit {
   }
 
   saveUserChanges() {
-    this.usersService.post(this.user)
+    this.usersService.updateUser(this.user)
       .subscribe(
         user => {
           this.user = user;

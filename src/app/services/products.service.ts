@@ -8,17 +8,21 @@ import {Product} from '../models/product';
 })
 export class ProductsService {
 
-  apiUrl = 'http://localhost:8080/products/';
+  endpoint = 'http://localhost:8080/products/';
 
 
   constructor(private http: HttpClient) { }
 
   getProductsTable(): Observable<Product[]> {
     return this.http
-      .get<Product[]>(this.apiUrl);
+      .get<Product[]>(this.endpoint);
   }
   getProductDetails(id: number): Observable<Product> {
     return this.http
-      .get<Product>(this.apiUrl + id);
+      .get<Product>(this.endpoint + id);
+  }
+
+  addNewProduct(product: Product): Observable<any> {
+    return this.http.post(this.endpoint + '/add', product);
   }
 }

@@ -16,8 +16,7 @@ export class UserAddComponent implements OnInit {
   message: string;
 
   constructor( private location: Location,
-               private usersService: UsersService,
-               private router: Router) {
+               private usersService: UsersService) {
     this.user = new User();
 
   }
@@ -26,7 +25,7 @@ export class UserAddComponent implements OnInit {
   }
 
   saveNewUser() {
-    this.usersService.post(this.user)
+    this.usersService.addNewUser(this.user)
       .subscribe(
         user => {
           this.user = user;

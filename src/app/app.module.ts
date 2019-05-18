@@ -17,6 +17,7 @@ import { UserDeleteComponent } from './components/user-delete/user-delete.compon
 import { UserActivationComponent } from './components/user-activation/user-activation.component';
 import { HomeComponent } from './components/home/home.component';
 import {HomeService} from './services/home.service';
+import { ProductAddComponent } from './components/product-add/product-add.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {HomeService} from './services/home.service';
     UserAddComponent,
     UserDeleteComponent,
     UserActivationComponent,
-    HomeComponent
+    HomeComponent,
+    ProductAddComponent
   ],
   imports: [
     BrowserModule,

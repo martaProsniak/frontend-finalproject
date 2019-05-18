@@ -10,6 +10,7 @@ import {UserAddComponent} from '../components/user-add/user-add.component';
 import {UserDeleteComponent} from '../components/user-delete/user-delete.component';
 import {UserActivationComponent} from '../components/user-activation/user-activation.component';
 import {HomeComponent} from '../components/home/home.component';
+import {ProductAddComponent} from '../components/product-add/product-add.component';
 
 
 const appRoutes: Routes = [
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
   { path: 'users/deactivate/:id', component: UserActivationComponent },
   { path: 'users-register', component: UserAddComponent},
   { path: 'products', component: ProductListComponent},
-  { path: 'products/:id', component: ProductDetailsComponent}
+  { path: 'products/:id', component: ProductDetailsComponent},
+  { path: 'products-add', component: ProductAddComponent}
 ];
 
 @NgModule({

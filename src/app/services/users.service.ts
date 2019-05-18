@@ -24,8 +24,12 @@ export class UsersService {
       .get<User>(this.endpoint + '/' + id);
   }
 
-  post(user: User): Observable<any> {
+  updateUser(user: User): Observable<any> {
     return this.http.post(this.endpoint + '/edit/' + user.id, user);
+  }
+
+  addNewUser(user: User): Observable<any> {
+    return this.http.post(this.endpoint + '/add', user);
   }
 
   delete(user: User): Observable<any> {
