@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {UsersService} from '../../services/users.service';
-import {ActivatedRoute, Router} from '@angular/router';
+import { Router} from '@angular/router';
+import {User} from '../../models/user';
+import { Location} from '@angular/common';
 
 @Component({
   selector: 'app-user-add',
@@ -9,23 +11,30 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class UserAddComponent implements OnInit {
 
-  @Input() userData = { user_name: '', user_surname: '', user_login: '',
-                        user_accepted: 'false', user_role: 'USER'};
 
+  user: User;
 
-  constructor(public usersService: UsersService,
-              private route: ActivatedRoute,
-              private router: Router) { }
+  constructor( private location: Location,
+               private usersService: UsersService,
+               private router: Router) {
+    this.user = new User();
 
-  ngOnInit() {
   }
 
-  addUser() {
-    this.usersService.addUser(this.userData).subscribe((result) => {
-      this.router.navigate(['/users/']);
-    }, (err) => {
-      console.log(err);
-    });
+  ngOnInit(): void {
+  }
+
+  saveNewUser() {
+    this.usersService.post(this.user)
+      .subscribe(
+        user => {
+          this.user = user;
+        }
+      );
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 
 }

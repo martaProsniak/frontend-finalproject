@@ -12,8 +12,9 @@ import {UserAddComponent} from '../components/user-add/user-add.component';
 const appRoutes: Routes = [
   { path: 'users/:id', component: UserDetailsComponent, pathMatch: 'full' },
   { path: 'users', component: UsersListComponent, pathMatch: 'full' },
-  { path: 'users/edit/:id', component: UserEditComponent, pathMatch: 'full' },
-  { path: 'users/add', component: UserAddComponent, pathMatch: 'full' },
+  { path: 'users/edit/:id', component: UserEditComponent },
+  { path: 'users-register', component: UserAddComponent},
+  { path: 'users-add', component: UserAddComponent},
   { path: 'products', component: ProductListComponent, pathMatch: 'full' },
   { path: 'products/:id', component: ProductDetailsComponent, pathMatch: 'full' }
 ];
