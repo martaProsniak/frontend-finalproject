@@ -1,3 +1,32 @@
-<p>
-  product-add works!
-</p>
+<div class="product_details">
+  <h2>Add new product</h2>
+  <div>
+    <label>name:
+      <input [(ngModel)]="product.name" placeholder="name"/>
+    </label>
+  </div>
+  <div>
+    <label>description:
+      <input [(ngModel)]="product.description" placeholder="description"/>
+    </label>
+  </div>
+  <div>
+    <label>price:
+      <input [(ngModel)]="product.price" placeholder="price"/>
+    </label>
+  </div>
+  <div>
+    <label>available?:
+      <input [(ngModel)]="product.available" placeholder="yes"/>
+    </label>
+  </div>
+  <div>
+    <label>photo url:
+      <input [(ngModel)]="product.url" placeholder="url"/>
+    </label>
+  </div>
+  <button (click)="saveNewProduct()">save</button>
+  <button (click)="goBack()">go back</button>
+</div>
+
+

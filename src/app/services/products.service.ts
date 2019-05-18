@@ -8,7 +8,7 @@ import {Product} from '../models/product';
 })
 export class ProductsService {
 
-  endpoint = 'http://localhost:8080/products/';
+  endpoint = 'http://localhost:8080/products';
 
 
   constructor(private http: HttpClient) { }
@@ -19,7 +19,7 @@ export class ProductsService {
   }
   getProductDetails(id: number): Observable<Product> {
     return this.http
-      .get<Product>(this.endpoint + id);
+      .get<Product>(this.endpoint + '/' + id);
   }
 
   addNewProduct(product: Product): Observable<any> {

@@ -11,21 +11,58 @@ main{
 .banner{
   background-color: darkslateblue;
   color: lightgrey;
-  min-height: 100px;
-  min-width: 500px;
-  margin: 0px auto 10px auto;
-  font-family: "Manjari Bold";
+  height: 150px;
+  margin: 0 auto 10px auto;
   font-size: 25px;
-  text-align: center;
+  padding: 20px 0 20px 0;
+}
+
+#title_container{
+  padding: 20px auto 20px auto;
+  display: flex;
+  background-color: darkslateblue;
+  height: 100px;
+  width: 960px;
+  margin: 0 auto 0 auto;
+  align-self: center;
 }
 
 .banner:hover{
   cursor: pointer;
 }
 
+.icon{
+  height: 90px;
+  width: 90px;
+}
+
+.icon img{
+  width: fit-content;
+  height: fit-content;
+}
+
+.title{
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: fit-content;
+}
+
+h1{
+  font-max-size: 2em;
+  margin: 2px auto 2px auto;
+  height: 28px;
+  width: fit-content;
+}
+.title article{
+  font-max-size: 1em;
+  margin: 0 auto 2px auto;
+  height: 28px;
+  width: fit-content;
+}
+
 nav{
   min-width: 500px;
-  font-family: "Manjari Bold";
   font-size: 20px;
   text-align: center;
   min-height: 50px;

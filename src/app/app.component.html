@@ -1,4 +1,17 @@
-<section routerLink="" class="banner">SZOP.PL<br> Najlepszy sklep ever</section>
+<section routerLink="" class="banner">
+  <div id="title_container">
+    <div class ="icon">
+      <img src="https://img.icons8.com/doodle/96/000000/cell-phone.png">
+    </div>
+    <div class="title">
+        <h1>{{title}}</h1><br>
+        <article>Best phones in web</article>
+    </div>
+    <div class ="icon">
+      <img src="https://img.icons8.com/doodle/96/000000/cell-phone.png">
+    </div>
+  </div>
+</section>
 <nav>
   <ul class="menu">
     <li><a routerLink="/users">Users</a></li>
@@ -9,5 +22,10 @@
 <main><!--The content below is only a placeholder and can be replaced.-->
   <router-outlet></router-outlet>
 </main>
-<footer>Bombastic fantastic</footer>
+<footer>
+  <div class="footer info">Bombastic fantastic</div>
+  <div class="sources">
+    <p><a href="https://icons8.com/icon/80740/cell-phone">Cell Phone icon by Icons8</a></p>
+  </div>
+</footer>
 
