@@ -1,0 +1,17 @@
+button {
+  background-color: #474647;
+  color: #3ED682;
+  border: #474647 2px solid;
+  border-radius: 5px;
+  font-family: 'Sniglet', cursive;
+  height: 40px;
+  width: auto;
+  font-size: 1.5em;
+  margin: 0.5em;
+}
+button:hover{
+  cursor: pointer;
+  background-color: lightgrey;
+  color: #474647;
+  border: #3ED682 2px solid;
+}

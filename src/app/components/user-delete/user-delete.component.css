@@ -2,19 +2,6 @@
   margin-left: 3em;
 }
 
-button {
-  margin-left: 3em;
-  border-radius: 0.5em;
-  background-color: mediumseagreen;
-  font-size: 15px;
-}
-button:hover {
-  border-radius: 0.5em;
-  background-color: greenyellow;
-  font-size: 15px;
-  cursor: pointer;
-}
-
 .deleted{
   margin-left: 3em;
   background-color: tomato;
