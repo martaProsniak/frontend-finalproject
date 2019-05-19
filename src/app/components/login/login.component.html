@@ -1,13 +1,17 @@
 <div class="main">
-  <header>Login</header>
-  <header routerLink="/register">Register</header>
-  <div>
-    <label>Login:
+  <header>
+    <span>Login</span>
+    <span routerLink="/register">Register</span>
+  </header>
+  <div class="login">
+    <label>
+      <p>Login:</p>
       <input [(ngModel)]="user.login" placeholder="login"/>
     </label>
   </div>
   <div>
-    <label>Password:
+    <label>
+      <p>Password:</p>
       <input [(ngModel)]="user.password" placeholder="password"/>
     </label>
   </div>

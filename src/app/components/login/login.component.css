@@ -1,3 +1,32 @@
-main{
-  margin-left: 2em;
+.main {
+  margin: 2em auto 2em auto;
+  height: 500px;
+  width: 960px;
+  text-align: center;
+  background-color: #3ED682;
+  padding: 1em;
 }
+
+header {
+  display: flex;
+
+}
+span {
+  background-color: #474647;
+  color: #3ED682;
+  border: #474647 2px solid;
+  border-radius: 5px;
+  font-family: 'Sniglet', cursive;
+  height: 50px;
+  width: 200px;
+  font-size: 2em;
+  margin: 1em auto 1em auto;
+}
+span:hover{
+  cursor: pointer;
+  background-color: lightgrey;
+  color: #474647;
+  border: #3ED682 2px solid;
+}
+
+
