@@ -18,6 +18,7 @@ import { UserActivationComponent } from './components/user-activation/user-activ
 import { HomeComponent } from './components/home/home.component';
 import {HomeService} from './services/home.service';
 import { ProductAddComponent } from './components/product-add/product-add.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ProductAddComponent } from './components/product-add/product-add.compon
     UserDeleteComponent,
     UserActivationComponent,
     HomeComponent,
-    ProductAddComponent
+    ProductAddComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
