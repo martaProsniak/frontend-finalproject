@@ -9,6 +9,7 @@ import {Observable} from 'rxjs';
 })
 export class UsersService {
 
+  host = 'http://localhost:8080/';
   endpoint = 'http://localhost:8080/users';
 
   headers = new HttpHeaders({'Content-Type':  'application/json'});
@@ -42,6 +43,10 @@ export class UsersService {
 
   deactivate(user: User): Observable<any> {
     return this.http.post(this.endpoint + '/deactivate/' + user.id, user);
+  }
+
+  login(user: User): Observable<any> {
+    return this.http.post(this.host + 'login', user);
   }
 
 

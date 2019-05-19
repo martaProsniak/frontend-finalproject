@@ -3,13 +3,14 @@
   <header routerLink="/register">Register</header>
   <div>
     <label>Login:
-      <input placeholder="name"/>
+      <input [(ngModel)]="user.login" placeholder="login"/>
     </label>
   </div>
   <div>
     <label>Password:
-      <input placeholder="password"/>
+      <input [(ngModel)]="user.password" placeholder="password"/>
     </label>
   </div>
-  <button>Login</button>
+  <button (click)="login()">Login</button>
+  <button (click)="goBack()">Back</button>
 </div>
