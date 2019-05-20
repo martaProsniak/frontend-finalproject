@@ -20,6 +20,11 @@
       <input type="password" [(ngModel)]="user.password" placeholder="password"/>
     </label>
   </div>
+  <div style="display: none;">
+    <label>accepted:
+      <input [(ngModel)]="user.accepted" value="false"/>
+    </label>
+  </div>
   <div>
     <label>role:
       <select [(ngModel)]="user.role" name="role">
