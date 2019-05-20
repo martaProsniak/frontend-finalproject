@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,9 @@ import {HttpClient} from '@angular/common/http';
 export class AppComponent {
   title = 'Connect.com';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private translate: TranslateService) {
+    translate.setDefaultLang('en');
   }
 }
 

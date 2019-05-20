@@ -1,12 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
 import {UsersService} from './services/users.service';
@@ -39,9 +41,16 @@ import { LoginComponent } from './components/login/login.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
     NgbModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     UsersService,
@@ -50,3 +59,7 @@ import { LoginComponent } from './components/login/login.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
