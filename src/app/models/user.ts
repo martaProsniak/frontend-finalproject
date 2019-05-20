@@ -1,3 +1,5 @@
+import {Product} from './product';
+
 export class User {
   id: number;
   name: string;
@@ -6,4 +8,5 @@ export class User {
   password: string;
   accepted: boolean;
   role: any;
+  products: Product[];
 }
