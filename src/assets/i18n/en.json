@@ -1,6 +1,34 @@
 {
-  "user": {
-    "name": "Name",
-    "surname": "Surname"
-  }
+	"vocab": {
+		"activate": "Activate",
+		"activated": "Activated",
+		"actuser": "Activate user",
+		"add": "Add",
+		"admin": "Admin",
+		"available": "Available",
+		"back": "Back",
+		"calculate": "Calculate",
+		"cart": "Cart",
+		"delete": "Delete",
+		"desc": "Description",
+		"details": "Details",
+		"display": "Display",
+		"edit": "Edit",
+		"hello": "Hello",
+		"log-in": "Log in",
+		"name": "Name",
+		"no": "No",
+		"password": "Password",
+		"price": "Price",
+		"product": "Product",
+		"products": "Products",
+		"remove": "Remove",
+		"role": "Role",
+		"saveChanges": "Save changes",
+		"sign-up": "Sign up",
+		"surname": "Surname",
+		"true": "Yes",
+		"user": "User",
+		"users": "Users"
+	}
 }

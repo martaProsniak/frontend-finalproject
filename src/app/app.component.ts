@@ -14,6 +14,14 @@ export class AppComponent {
               private translate: TranslateService) {
     translate.setDefaultLang('en');
   }
+
+  translatePl(): void {
+    this.translate.setDefaultLang('pl');
+  }
+
+  translateEn(): void {
+    this.translate.setDefaultLang('en');
+  }
 }
 
 

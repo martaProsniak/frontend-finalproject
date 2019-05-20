@@ -1,6 +1,34 @@
 {
-  "user": {
-    "name": "Imię",
-    "surname": "Nazwisko"
-  }
+	"vocab": {
+		"activate": "Aktywuj",
+		"activated": "Aktywowano",
+		"actuser": "Aktywuj użytkownika",
+		"add": "Dodaj",
+		"admin": "Administrator",
+		"available": "Dostępny",
+		"back": "Wróć",
+		"calculate": "Przelicz",
+		"cart": "Koszyk",
+		"delete": "Usuń",
+		"desc": "Opis",
+		"details": "Szczegóły",
+		"display": "Wyświetl",
+		"edit": "Edytuj",
+		"hello": "Cześć",
+		"log-in": "",
+		"name": "Imię",
+		"no": "Nie",
+		"password": "Hasło",
+		"price": "Cena",
+		"product": "Produkt",
+		"products": "Produkty",
+		"remove": "Usuń",
+		"role": "Rola",
+		"saveChanges": "Zapisz zmiany",
+		"sign-up": "Zarejestruj",
+		"surname": "Nazwisko",
+		"true": "Tak",
+		"user": "Użytkownik",
+		"users": "Użytkownicy"
+	}
 }

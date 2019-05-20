@@ -1,13 +1,13 @@
 <div class="user_details">
   <h2>{{user.login | uppercase}}</h2>
-  <div><span>id: </span>{{user.id}}</div>
-  <div><span>{{ 'user.name' | translate }}: </span>{{user.name}}</div>
-  <div><span>{{ 'user.surname' | translate }}: </span>{{user.surname}}</div>
+  <div style="display: none"><span>id: </span>{{user.id}}</div>
+  <div><span>{{ 'vocab.name' | translate }}: </span>{{user.name}}</div>
+  <div><span>{{ 'vocab.surname' | translate }}: </span>{{user.surname}}</div>
   <div><span>login: </span>{{user.login}}</div>
-  <div><span>password: </span>{{user.password}}</div>
-  <div><span>accepted: </span>{{user.accepted}}</div>
-  <div><span>role: </span>{{user.role}}</div>
+  <div><span>{{ 'vocab.password' | translate }}: </span><{{user.password}}</div>
+  <div><span>{{ 'vocab.activated' | translate }}: </span>{{user.accepted}}</div>
+  <div><span>{{ 'vocab.role' | translate }}: </span>{{user.role}}</div>
 </div>
 <div id="button-container">
-  <button class="back" (click)="goBack()">Back</button>
+  <button class="back" (click)="goBack()">{{'vocab.back' | translate}}</button>
 </div>
