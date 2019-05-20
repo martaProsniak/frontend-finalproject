@@ -1,17 +1,29 @@
 .main {
-  margin: 2em auto 2em auto;
-  height: 500px;
-  width: 960px;
+  margin: 2em auto 0 auto;
+  height: 400px;
+  width: 700px;
   text-align: center;
   background-color: #3ED682;
   padding: 1em;
+  border: #474647 2px solid;
+  border-bottom: none;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 }
 
-header {
-  display: flex;
-
+#button-container{
+  margin: 0 auto 0 auto;
+  height: 40px;
+  width: 700px;
+  background-color: #3ED682;
+  padding: 0;
+  border: #474647 2px solid;
+  border-top: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
-span {
+
+label p {
   background-color: #474647;
   color: #3ED682;
   border: #474647 2px solid;
@@ -22,11 +34,18 @@ span {
   font-size: 2em;
   margin: 1em auto 1em auto;
 }
-span:hover{
+label p:hover{
   cursor: pointer;
   background-color: lightgrey;
   color: #474647;
   border: #3ED682 2px solid;
+}
+
+.back {
+  float: right;
+  margin: 0;
+  bottom: 0;
+  border-top-right-radius: 0;
 }
 
 

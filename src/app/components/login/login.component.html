@@ -1,8 +1,4 @@
 <div class="main">
-  <header>
-    <span>Login</span>
-    <span routerLink="/register">Register</span>
-  </header>
   <div class="login">
     <label>
       <p>Login:</p>
@@ -12,9 +8,13 @@
   <div>
     <label>
       <p>Password:</p>
-      <input [(ngModel)]="user.password" placeholder="password"/>
+      <input type="password" [(ngModel)]="user.password" placeholder="password"/>
     </label>
   </div>
   <button (click)="login()">Login</button>
-  <button (click)="goBack()">Back</button>
+  <button routerLink="/register">Sign up</button>
 </div>
+<div id="button-container">
+  <button class="back" (click)="goBack()">Back</button>
+</div>
+

@@ -17,16 +17,22 @@
   </div>
   <div>
     <label>password:
-      <input [(ngModel)]="user.password" placeholder="password"/>
+      <input type="password" [(ngModel)]="user.password" placeholder="password"/>
     </label>
   </div>
   <div>
     <label>role:
-      <input [(ngModel)]="user.role" placeholder="role"/>
+      <select [(ngModel)]="user.role" name="role">
+        <option value="USER">User</option>
+        <option value="ADMIN">Admin</option>
+      </select>
     </label>
   </div>
-  <button (click)="saveNewUser()">create user</button>
-  <button (click)="goBack()">go back</button>
+  <button (click)="saveNewUser()">Sign up</button>
 </div>
+<div id="button-container">
+  <button class="back" (click)="goBack()">Back</button>
+</div>
+
 
 

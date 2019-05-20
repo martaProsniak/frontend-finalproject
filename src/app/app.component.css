@@ -65,7 +65,7 @@ h1{
 }
 
 nav{
-  width: fit-content;
+  width: auto;
   height: 50px;
   font-size: 2.5em;
   text-align: center;
