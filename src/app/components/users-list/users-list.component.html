@@ -26,7 +26,7 @@
     <td><a routerLink="/users/{{user.id}}">{{'vocab.display' | translate}}</a></td>
     <td><a routerLink="/users/edit/{{user.id}}">{{'vocab.edit' | translate}}</a></td>
     <td *ngIf="!user.accepted"><a routerLink="/users/activate/{{user.id}}">{{'vocab.activate' | translate}}</a></td>
-    <td *ngIf="user.accepted">{{'vocab.yes' | translate}}</td>
+    <td *ngIf="user.accepted">---</td>
     <td><a routerLink="/users/delete/{{user.id}}">{{'vocab.delete' | translate}}</a></td>
   </tr>
   </tbody>
