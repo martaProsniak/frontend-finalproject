@@ -10,14 +10,17 @@
 		"calculate": "Przelicz",
 		"cart": "Koszyk",
 		"delete": "Usuń",
+		"deleted": "usunięty",
 		"desc": "Opis",
 		"details": "Szczegóły",
 		"display": "Wyświetl",
 		"edit": "Edytuj",
 		"hello": "Cześć",
 		"log-in": "",
+		"mdelete": "Czy na pewno chcesz usunąć użytkownika",
 		"name": "Imię",
 		"no": "Nie",
+		"order": "Zamówienie",
 		"password": "Hasło",
 		"price": "Cena",
 		"product": "Produkt",
@@ -29,6 +32,7 @@
 		"surname": "Nazwisko",
 		"true": "Tak",
 		"user": "Użytkownik",
-		"users": "Użytkownicy"
+		"users": "Użytkownicy",
+		"yes": "Tak"
 	}
 }

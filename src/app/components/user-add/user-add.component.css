@@ -11,6 +11,23 @@
   border-top-left-radius: 5px;
 }
 
+h2{
+  font-family: 'Sniglet', cursive;
+  margin-bottom: 1em;
+}
+
+.labels {
+  width: 400px;
+  height: auto;
+  margin: auto;
+  padding: 0 1em 0 1em;
+}
+
+label span {
+  font-size: 1.5em;
+  font-family: 'Sniglet', cursive;
+}
+
 #button-container{
   margin: 0 auto 0 auto;
   height: 40px;
@@ -29,6 +46,6 @@
   border-top-right-radius: 0;
 }
 
-h2{
-  font-family: 'Sniglet', cursive;
-}
+
+
+

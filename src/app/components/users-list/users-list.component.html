@@ -1,17 +1,17 @@
 <button routerLink="/register">Add new user</button>
 <table class="table table-striped">
   <thead>
-  <th scope="col">id</th>
-  <th scope="col">name</th>
-  <th scope="col">surname</th>
-  <th scope="col">login</th>
-  <th scope="col">password</th>
-  <th scope="col">activated</th>
-  <th scope="col">role</th>
-  <th scope="col">display</th>
-  <th scope="col">edit</th>
-  <th scope="col">activate</th>
-  <th scope="col">delete</th>
+  <th scope="col">Id</th>
+  <th scope="col">{{'vocab.name' | translate}}</th>
+  <th scope="col">{{'vocab.surname' | translate}}</th>
+  <th scope="col">Login</th>
+  <th scope="col">{{'vocab.password' | translate}}</th>
+  <th scope="col">{{'vocab.activated' | translate}}?</th>
+  <th scope="col">{{'vocab.role' | translate}}</th>
+  <th scope="col">{{'vocab.display' | translate}}</th>
+  <th scope="col">{{'vocab.edit' | translate}}</th>
+  <th scope="col">{{'vocab.activate' | translate}}</th>
+  <th scope="col">{{'vocab.delete' | translate}}</th>
   </thead>
   <tbody>
   <tr *ngFor="let user of users">
@@ -20,13 +20,14 @@
     <td>{{user.surname}}</td>
     <td>{{user.login}}</td>
     <td>{{user.password}}</td>
-    <td>{{user.accepted}}</td>
-    <td>{{user.role | lowercase}}</td>
-    <td><a routerLink="/users/{{user.id}}">display</a></td>
-    <td><a routerLink="/users/edit/{{user.id}}">edit</a></td>
-    <td *ngIf="!user.accepted"><a routerLink="/users/activate/{{user.id}}">activate</a></td>
-    <td *ngIf="user.accepted"><a routerLink="/users/deactivate/{{user.id}}">deactivate</a></td>
-    <td><a routerLink="/users/delete/{{user.id}}">delete</a></td>
+    <td *ngIf="!user.accepted">{{'vocab.no' | translate}}</td>
+    <td *ngIf="user.accepted">{{'vocab.yes' | translate}}</td>
+    <td>{{user.role | uppercase}}</td>
+    <td><a routerLink="/users/{{user.id}}">{{'vocab.display' | translate}}</a></td>
+    <td><a routerLink="/users/edit/{{user.id}}">{{'vocab.edit' | translate}}</a></td>
+    <td *ngIf="!user.accepted"><a routerLink="/users/activate/{{user.id}}">{{'vocab.activate' | translate}}</a></td>
+    <td *ngIf="user.accepted">{{'vocab.yes' | translate}}</td>
+    <td><a routerLink="/users/delete/{{user.id}}">{{'vocab.delete' | translate}}</a></td>
   </tr>
   </tbody>
 </table>

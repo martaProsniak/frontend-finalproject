@@ -1,21 +1,22 @@
 <div *ngIf="!deleted">
   <div class="user_details">
-    <h2>{{user.login | uppercase}}</h2>
-    <div><span>id: </span>{{user.id}}</div>
-    <div><span>name: </span>{{user.name}}</div>
-    <div><span>surname: </span>{{user.surname}}</div>
-    <div><span>login: </span>{{user.login}}</div>
-    <div><span>accepted: </span>{{user.accepted}}</div>
-    <div><span>role: </span>{{user.role}}</div>
-    <button (click)="deleteUser()">delete</button>
+    <h2>{{'vocab.mdelete' | translate}} {{user.login}}?</h2>
+    <div style="display: none"><span>id: </span>{{user.id}}</div>
+    <div><span>{{ 'vocab.name' | translate }}: </span>{{user.name}}</div>
+    <div><span>{{ 'vocab.surname' | translate }}: </span>{{user.surname}}</div>
+    <div><span>Login: </span>{{user.login}}</div>
+    <div><span>{{ 'vocab.password' | translate }}: </span><{{user.password}}</div>
+    <div><span>{{ 'vocab.activated' | translate }}: </span>{{user.accepted}}</div>
+    <div><span>{{ 'vocab.role' | translate }}: </span>{{user.role}}</div>
+    <button (click)="deleteUser()">{{ 'vocab.delete' | translate }}</button>
   </div>
 </div>
 
 <div *ngIf="deleted">
   <div class="deleted">
-    User {{user.id}} deleted!
+    {{ 'vocab.user' | translate }} {{user.id}} {{'vocab.deleted' | translate}}!
   </div>
 </div>
 <div id="button-container">
-  <button class="back" (click)="goBack()">Back</button>
+  <button class="back" (click)="goBack()">{{ 'vocab.back' | translate }}</button>
 </div>

@@ -10,14 +10,17 @@
 		"calculate": "Calculate",
 		"cart": "Cart",
 		"delete": "Delete",
+		"deleted": "deleted",
 		"desc": "Description",
 		"details": "Details",
 		"display": "Display",
 		"edit": "Edit",
 		"hello": "Hello",
 		"log-in": "Log in",
+		"mdelete": "Are you sure you want to delete user",
 		"name": "Name",
 		"no": "No",
+		"order": "Order",
 		"password": "Password",
 		"price": "Price",
 		"product": "Product",
@@ -29,6 +32,7 @@
 		"surname": "Surname",
 		"true": "Yes",
 		"user": "User",
-		"users": "Users"
+		"users": "Users",
+		"yes": "Yes"
 	}
 }

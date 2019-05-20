@@ -1,42 +1,42 @@
 <div class="user_details">
-  <h2>Register</h2>
-  <div>
-    <label>name:
-      <input [(ngModel)]="user.name" placeholder="name"/>
+  <h2>{{ 'vocab.sign-up' | translate }}</h2>
+  <div class="labels">
+    <label><span>{{ 'vocab.name' | translate }}:</span>
+      <input [(ngModel)]="user.name" placeholder="{{ 'vocab.name' | translate }}"/>
     </label>
   </div>
-  <div>
-    <label>surname:
-      <input [(ngModel)]="user.surname" placeholder="surname"/>
+  <div class="labels">
+    <label><span>{{ 'vocab.surname' | translate }}:</span>
+      <input [(ngModel)]="user.surname" placeholder="{{ 'vocab.surname' | translate }}"/>
     </label>
   </div>
-  <div>
-    <label>login:
-      <input [(ngModel)]="user.login" placeholder="login"/>
+  <div class="labels">
+    <label><span>Login:</span>
+      <input [(ngModel)]="user.login" placeholder="Login"/>
     </label>
   </div>
-  <div>
-    <label>password:
-      <input type="password" [(ngModel)]="user.password" placeholder="password"/>
+  <div class="labels">
+    <label><span>{{ 'vocab.password' | translate }}:</span>
+      <input type="password" [(ngModel)]="user.password" placeholder="{{ 'vocab.password' | translate }}"/>
     </label>
   </div>
-  <div style="display: none;">
-    <label>accepted:
+  <div class="labels" style="display: none;">
+    <label><span>accepted:</span>
       <input [(ngModel)]="user.accepted" value="false"/>
     </label>
   </div>
-  <div>
-    <label>role:
+  <div class="labels">
+    <label><span>{{ 'vocab.role' | translate }}:</span>
       <select [(ngModel)]="user.role" name="role">
-        <option value="USER">User</option>
-        <option value="ADMIN">Admin</option>
+        <option value="USER">{{ 'vocab.user' | translate }}</option>
+        <option value="ADMIN">{{ 'vocab.admin' | translate }}</option>
       </select>
     </label>
   </div>
-  <button (click)="saveNewUser()">Sign up</button>
+  <button (click)="saveNewUser()">{{ 'vocab.sign-up' | translate }}</button>
 </div>
 <div id="button-container">
-  <button class="back" (click)="goBack()">Back</button>
+  <button class="back" (click)="goBack()">{{ 'vocab.back' | translate }}</button>
 </div>
 
 

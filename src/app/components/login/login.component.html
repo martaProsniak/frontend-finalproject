@@ -7,14 +7,14 @@
   </div>
   <div>
     <label>
-      <p>Password:</p>
-      <input type="password" [(ngModel)]="user.password" placeholder="password"/>
+      <p>{{ 'vocab.password' | translate }}:</p>
+      <input type="password" [(ngModel)]="user.password" placeholder="{{ 'vocab.password' | translate }}:"/>
     </label>
   </div>
-  <button (click)="login()">Login</button>
-  <button routerLink="/register">Sign up</button>
+  <button (click)="login()">{{ 'vocab.password' | translate }}</button>
+  <button routerLink="/register">{{ 'vocab.sign-up' | translate }}</button>
 </div>
 <div id="button-container">
-  <button class="back" (click)="goBack()">Back</button>
+  <button class="back" (click)="goBack()">{{ 'vocab.back' | translate }}</button>
 </div>
 
