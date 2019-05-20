@@ -1,3 +1,5 @@
+import {User} from './user';
+
 export class Product {
   id: number;
   name: string;
@@ -5,4 +7,5 @@ export class Product {
   price: number;
   available: boolean;
   url: string;
+  localUser: User;
 }

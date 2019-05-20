@@ -3,6 +3,7 @@ import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 import {Product} from '../../models/product';
 import {ProductsService} from '../../services/products.service';
+import {User} from '../../models/user';
 
 @Component({
   selector: 'app-product-details',
@@ -12,6 +13,7 @@ import {ProductsService} from '../../services/products.service';
 export class ProductDetailsComponent implements OnInit {
 
   product: Product = new Product();
+  user: User;
 
   constructor(private productsService: ProductsService,
               private route: ActivatedRoute,
@@ -23,6 +25,8 @@ export class ProductDetailsComponent implements OnInit {
       .getProductDetails(id)
       .subscribe(result => {
         this.product = result;
+        this.user = this.product.localUser;
+        console.log(this.product.localUser.login);
       });
   }
 
