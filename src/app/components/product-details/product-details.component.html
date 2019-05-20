@@ -1,5 +1,5 @@
-<article class="product_photo"><img [src]="product.url" alt=""></article>
 <div class="product_details">
+  <article class="product_photo"><img [src]="product.url" alt=""></article>
   <h2>{{product.name | uppercase}}</h2>
   <div><span>id: </span>{{product.id}}</div>
   <div><span>name: </span>{{product.name}}</div>
@@ -7,4 +7,7 @@
   <div><span>price: </span>{{product.price}}</div>
   <div><span>available: </span>{{product.available}}</div>
 </div>
-<button (click)="goBack()">go back</button>
+<div id="button-container">
+  <button class="back" (click)="goBack()">Back</button>
+</div>
+

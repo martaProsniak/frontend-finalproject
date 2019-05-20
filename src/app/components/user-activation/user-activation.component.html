@@ -1,3 +1,8 @@
-<div *ngIf="user.accepted">User {{user.id}} deactivated!</div>
-<div *ngIf="!user.accepted">User {{user.id}} activated!</div>
-<button (click)="goBack()">go back</button>
+<div class = main>
+  <div *ngIf="user.accepted">User {{user.id}} deactivated!</div>
+  <div *ngIf="!user.accepted">User {{user.id}} activated!</div>
+</div>
+<div id="button-container">
+  <button class="back" (click)="goBack()">Back</button>
+</div>
+

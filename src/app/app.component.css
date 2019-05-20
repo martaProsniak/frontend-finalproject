@@ -7,7 +7,7 @@ body {
 }
 
 main{
-  min-height: 760px;
+  min-height: 75%;
 }
 
 .banner{
@@ -106,12 +106,12 @@ footer {
   font-family: 'Sniglet', cursive;
   background-color: #474647;
   color: #49C17F;
-  min-height: 75px;
+  min-height: 100px;
   width: auto;
-  margin: 0 auto 0 auto;
   font-size: 1.75em;
   text-align: center;
   clear: both;
+  margin: 4em auto auto;
 }
 
 footer p {

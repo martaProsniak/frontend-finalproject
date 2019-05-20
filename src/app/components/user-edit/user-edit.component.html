@@ -17,15 +17,12 @@
     </label>
   </div>
   <div>
-    <label>accepted?:
-      <input [(ngModel)]="user.accepted" placeholder="accepted"/>
-    </label>
-  </div>
-  <div>
     <label>role:
       <input [(ngModel)]="user.role" placeholder="role"/>
     </label>
   </div>
+  <button (click)="saveUserChanges()">Save changes</button>
 </div>
-<button (click)="saveUserChanges()">Save changes</button>
-<button (click)="goBack()">go back</button>
+<div id="button-container">
+  <button class="back" (click)="goBack()">Back</button>
+</div>
