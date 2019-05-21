@@ -12,7 +12,7 @@ export class AuthenticationService {
   host = 'http://localhost:8080/';
 
   private currentUserSubject: BehaviorSubject<any>;
-  private currentUser: Observable<any>;
+  public currentUser: Observable<any>;
 
   constructor(private http: HttpClient) {
     this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(localStorage.getItem('currentUser')));
@@ -31,7 +31,7 @@ export class AuthenticationService {
         return user;
   }));
   }
-  logout(){
+  logout() {
     localStorage.removeItem('currentUser');
     this.currentUserSubject.next(null);
   }
