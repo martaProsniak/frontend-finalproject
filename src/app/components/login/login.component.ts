@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {UsersService} from '../../services/users.service';
+import {UsersService} from '../../_services/users.service';
 import {User} from '../../models/user';
 import {Location} from '@angular/common';
 import {Router} from '@angular/router';
-import {AuthenticationService} from '../../services/authentication.service';
+import {AuthenticationService} from '../../_services/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -13,6 +13,7 @@ import {AuthenticationService} from '../../services/authentication.service';
 export class LoginComponent implements OnInit {
 
   user: User;
+  error: string;
 
   constructor(private location: Location,
               private usersService: UsersService,
@@ -30,6 +31,11 @@ export class LoginComponent implements OnInit {
       .subscribe(
         user => {
           this.user = user;
+          this.router.navigate(['/products']);
+        },
+        error => {
+          this.error = error;
+          // error page to be prepared
           this.router.navigate(['']);
         }
       );

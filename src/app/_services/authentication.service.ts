@@ -11,29 +11,29 @@ export class AuthenticationService {
 
   host = 'http://localhost:8080/';
 
-  private currentUserSubcjet: BehaviorSubject<any>;
+  private currentUserSubject: BehaviorSubject<any>;
   private currentUser: Observable<any>;
 
   constructor(private http: HttpClient) {
-    this.currentUserSubcjet = new BehaviorSubject<any>(JSON.parse(localStorage.getItem('currentUser')));
-    this.currentUser = this.currentUserSubcjet.asObservable();
+    this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(localStorage.getItem('currentUser')));
+    this.currentUser = this.currentUserSubject.asObservable();
   }
 
   public get currentUserValue() {
-    return this.currentUserSubcjet.value;
+    return this.currentUserSubject.value;
   }
 
   login(user: User): Observable<any> {
     return this.http.post(this.host + 'login', user)
       .pipe(map(user => {
         localStorage.setItem('currentUser', JSON.stringify(user));
-        this.currentUserSubcjet.next(user);
+        this.currentUserSubject.next(user);
         return user;
   }));
   }
   logout(){
     localStorage.removeItem('currentUser');
-    this.currentUserSubcjet.next(null);
+    this.currentUserSubject.next(null);
   }
 }
 
