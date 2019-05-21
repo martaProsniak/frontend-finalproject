@@ -1,34 +1,34 @@
 <div class="product_details">
-  <h2>Add new product</h2>
+  <h2>{{'vocab.add-new-product' | translate}}</h2>
   <div>
-    <label>name:
-      <input [(ngModel)]="product.name" placeholder="name"/>
+    <label>{{'vocab.product-name' | translate}}:
+      <input [(ngModel)]="product.name" placeholder="{{'vocab.product-name' | translate}}"/>
     </label>
   </div>
   <div>
-    <label>description:
-      <input [(ngModel)]="product.description" placeholder="description"/>
+    <label>{{'vocab.desc' | translate}}:
+      <input [(ngModel)]="product.description" placeholder="{{'vocab.desc' | translate}}"/>
     </label>
   </div>
   <div>
-    <label>price:
-      <input [(ngModel)]="product.price" placeholder="price"/>
+    <label>{{'vocab.price' | translate}}:
+      <input [(ngModel)]="product.price" placeholder="{{'vocab.price' | translate}}"/>
     </label>
   </div>
   <div>
-    <label>available?:
+    <label>{{'vocab.available' | translate}}?
       <input [(ngModel)]="product.available" placeholder="yes"/>
     </label>
   </div>
   <div>
-    <label>photo url:
+    <label>{{'vocab.photo' | translate}} (url):
       <input [(ngModel)]="product.url" placeholder="url"/>
     </label>
   </div>
-  <button (click)="saveNewProduct()">save</button>
+  <button (click)="saveNewProduct()">{{'vocab.save-changes' | translate}}</button>
 </div>
 <div id="button-container">
-  <button class="back" (click)="goBack()">Back</button>
+  <button class="back" (click)="goBack()">{{'vocab.back' | translate}}</button>
 </div>
 
 

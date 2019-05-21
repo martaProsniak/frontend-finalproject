@@ -1,23 +1,25 @@
-<button routerLink="/products-add">Add new product</button>
+<button routerLink="/products-add"><i class="fas fa-plus-circle"></i></button>
 <table class="table table-striped">
   <thead>
-  <th scope="col">id</th>
-  <th scope="col">photo</th>
-  <th scope="col">name</th>
-  <th scope="col">description</th>
-  <th scope="col">price</th>
-  <th scope="col">available</th>
-  <th scope="col">details</th>
+  <th scope="col">Id</th>
+  <th scope="col">{{'vocab.photo' | translate}}</th>
+  <th scope="col">{{'vocab.product-name' | translate}}</th>
+  <th scope="col">{{'vocab.desc' | translate}}</th>
+  <th scope="col">{{'vocab.price' | translate}}</th>
+  <th scope="col">{{'vocab.availability' | translate}}</th>
+  <th scope="col">{{'vocab.details' | translate}}</th>
   </thead>
   <tbody>
   <tr *ngFor="let product of products">
     <td>{{product.id}}</td>
-    <td><img [src]="product.url"></td>
+    <td *ngIf="product.available"><img [src]="product.url" ></td>
+    <td *ngIf="!product.available"><img [src]="product.url" style="filter: grayscale(100%);"></td>
     <td>{{product.name}}</td>
     <td>{{product.description}}</td>
     <td>{{product.price}}</td>
-    <td>{{product.available}}</td>
-    <td><a routerLink="/products/{{product.id}}">display</a></td>
+    <td *ngIf="product.available"><i class="fas fa-cart-plus"></i></td>
+    <td *ngIf="!product.available">-</td>
+    <td><a routerLink="/products/{{product.id}}"><i class="fas fa-info-circle"></i></a></td>
   </tr>
   </tbody>
 </table>

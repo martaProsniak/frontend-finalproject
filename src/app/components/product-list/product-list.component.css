@@ -12,3 +12,7 @@ td a:hover{
   cursor: pointer;
   color: #3ED682;
 }
+td, th {
+  text-align: center;
+}
+

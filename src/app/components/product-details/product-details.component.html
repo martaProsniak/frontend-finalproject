@@ -1,14 +1,14 @@
 <div class="product_details">
   <article class="product_photo"><img [src]="product.url" alt=""></article>
   <h2>{{product.name | uppercase}}</h2>
-  <div><span>id: </span>{{product.id}}</div>
-  <div><span>name: </span>{{product.name}}</div>
-  <div><span>descrption: </span>{{product.description}}</div>
-  <div><span>price: </span>{{product.price}}</div>
-  <div><span>seller: </span>{{seller.login}}</div>
-  <div><span>available: </span>{{product.available}}</div>
+  <div><span>Id: </span>{{product.id}}</div>
+  <div><span>{{'vocab.product-name' | translate}}: </span>{{product.name}}</div>
+  <div><span>{{'vocab.desc' | translate}}: </span>{{product.description}}</div>
+  <div><span>{{'vocab.price' | translate}}: </span>{{product.price}}</div>
+  <div><span>{{'vocab.seller' | translate}}: </span>{{seller.login}}</div>
+  <div><span>{{'vocab.available' | translate}}: </span>{{product.available}}</div>
 </div>
 <div id="button-container">
-  <button class="back" (click)="goBack()">Back</button>
+  <button class="back" (click)="goBack()">{{'vocab.back' | translate}}: </button>
 </div>
 

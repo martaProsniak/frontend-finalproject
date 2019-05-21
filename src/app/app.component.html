@@ -12,16 +12,16 @@
     </div>
   </div>
 </section>
+<button class="pl" (click)="translatePl()">{{'vocab.pl' | translate}}</button>
+<button class="eng" (click)="translateEn()">{{'vocab.eng' | translate}}</button>
 <nav>
   <ul class="menu">
-    <li><a routerLink="/users">Users</a></li>
-    <li><a routerLink="/products">Products</a></li>
+    <li><a routerLink="/users">{{'vocab.users' | translate}}</a></li>
+    <li><a routerLink="/products">{{'vocab.products' | translate}}</a></li>
     <li><a routerLink="/login">Login</a></li>
   </ul>
 </nav>
 <main><!--The content below is only a placeholder and can be replaced.-->
-  <button (click)="translatePl()">Translate Pl</button>
-  <button (click)="translateEn()">Translate En</button>
   <router-outlet></router-outlet>
 </main>
 <footer class="page-footer">

@@ -25,3 +25,25 @@ input, select {
   width: 250px;
   font-size: 1em;
 }
+
+.eng {
+  background-color: #EFEFEF;
+  border-color: mediumblue;
+  color: blue;
+}
+.eng:hover {
+  background-color: blue;
+  border-color: blue;
+  color: #EFEFEF;
+}
+
+.pl {
+  background-color: #EFEFEF;
+  border-color: red;
+  color: red;
+}
+.pl:hover {
+  background-color: red;
+  border-color: red;
+  color: #EFEFEF;
+}
