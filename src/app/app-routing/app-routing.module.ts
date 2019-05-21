@@ -26,7 +26,8 @@ const appRoutes: Routes = [
   { path: 'users/deactivate/:id', component: UserActivationComponent },
   { path: 'products', component: ProductListComponent},
   { path: 'products/:id', component: ProductDetailsComponent},
-  { path: 'products-add', component: ProductAddComponent}
+  { path: 'products-add', component: ProductAddComponent},
+  { path: '**', redirectTo: ''}
 ];
 
 @NgModule({
