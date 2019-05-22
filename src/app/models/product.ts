@@ -7,5 +7,5 @@ export class Product {
   price: number;
   available: boolean;
   url: string;
-  localUser: User;
+  seller: User;
 }

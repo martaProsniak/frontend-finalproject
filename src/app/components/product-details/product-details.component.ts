@@ -25,8 +25,8 @@ export class ProductDetailsComponent implements OnInit {
       .getProductDetails(id)
       .subscribe(result => {
         this.product = result;
-        this.seller = this.product.localUser;
-        console.log(this.product.localUser.login);
+        this.seller = this.product.seller;
+        console.log(this.product.seller.login);
       });
   }
 
