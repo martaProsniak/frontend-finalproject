@@ -13,7 +13,7 @@ import {User} from '../../models/user';
 export class ProductDetailsComponent implements OnInit {
 
   product: Product = new Product();
-  seller: User;
+
 
   constructor(private productsService: ProductsService,
               private route: ActivatedRoute,
@@ -25,8 +25,6 @@ export class ProductDetailsComponent implements OnInit {
       .getProductDetails(id)
       .subscribe(result => {
         this.product = result;
-        this.seller = this.product.localUser;
-        console.log(this.product.localUser.login);
       });
   }
 

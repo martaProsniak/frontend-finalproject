@@ -38,7 +38,8 @@ export class LoginComponent implements OnInit {
           // error page to be prepared
           this.router.navigate(['']);
         }
-      );
+      )
+    console.log(this.user);
   }
 
   goBack(): void {

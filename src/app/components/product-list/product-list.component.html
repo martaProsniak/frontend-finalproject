@@ -20,6 +20,7 @@
     <td *ngIf="product.available"><i class="fas fa-cart-plus"></i></td>
     <td *ngIf="!product.available">-</td>
     <td><a routerLink="/products/{{product.id}}"><i class="fas fa-info-circle"></i></a></td>
+    <td>{{product.seller.login}}</td>
   </tr>
   </tbody>
 </table>

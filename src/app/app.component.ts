@@ -19,9 +19,11 @@ export class AppComponent {
               private authService: AuthenticationService) {
     translate.setDefaultLang('en');
     this.authService.currentUser.subscribe(x => this.currentUser = x);
+    console.log(this.currentUser.toString());
   }
 
   logout() {
+    console.log(this.currentUser);
     this.authService.logout();
     this.router.navigate(['/login']);
   }
