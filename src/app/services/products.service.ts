@@ -27,6 +27,12 @@ export class ProductsService {
   }
 
   updateProduct(product: Product): Observable<any> {
-    return this.http.put(this.endpoint + '/edit' + product.id, product);
+    return this.http.put(this.endpoint + '/edit/' + product.id, product);
   }
+
+  delete(product: Product): Observable<any> {
+    return this.http.delete(this.endpoint + '/delete/' + product.id);
+  }
+
+
 }
