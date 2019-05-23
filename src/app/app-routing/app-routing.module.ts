@@ -33,7 +33,7 @@ const appRoutes: Routes = [
   { path: 'products/:id', component: ProductDetailsComponent},
   { path: 'products-add', component: ProductAddComponent},
   { path: 'products-add', component: ProductAddComponent},
-  {path:  'products/edit/:id', component: ProductEditComponent},
+  { path:  'products/edit/:id', component: ProductEditComponent},
   { path: 'products/delete/:id', component: ProductDeleteComponent },
   { path: '**', redirectTo: ''}
 ];
