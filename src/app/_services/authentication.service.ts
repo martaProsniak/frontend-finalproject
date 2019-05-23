@@ -25,14 +25,16 @@ export class AuthenticationService {
 
   login(user: User): Observable<any> {
     return this.http.post(this.host + 'login', user)
-      .pipe(map(currUser => {
-        localStorage.setItem('currentUser', JSON.stringify(currUser));
-        this.currentUserSubject.next(currUser);
-        return currUser;
+      .pipe(map(currentUser => {
+        localStorage.setItem('currentUser', JSON.stringify(currentUser));
+        this.currentUserSubject.next(currentUser);
+        return currentUser;
   }));
   }
   logout() {
     this.currentUserSubject.next(null);
+    this.currentUser = null;
+    localStorage.removeItem('currentUser');
     localStorage.clear();
   }
 }

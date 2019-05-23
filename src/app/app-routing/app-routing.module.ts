@@ -12,6 +12,7 @@ import {UserActivationComponent} from '../components/user-activation/user-activa
 import {HomeComponent} from '../components/home/home.component';
 import {ProductAddComponent} from '../components/product-add/product-add.component';
 import {LoginComponent} from '../components/login/login.component';
+import {UsersProductsComponent} from '../components/users-products/users-products.component';
 
 
 const appRoutes: Routes = [
@@ -26,6 +27,7 @@ const appRoutes: Routes = [
   { path: 'users/activate/:id', component: UserActivationComponent },
   { path: 'users/deactivate/:id', component: UserActivationComponent },
   { path: 'products', component: ProductListComponent},
+  { path: 'products-users', component: UsersProductsComponent},
   { path: 'products/:id', component: ProductDetailsComponent},
   { path: 'products-add', component: ProductAddComponent},
   { path: '**', redirectTo: ''}

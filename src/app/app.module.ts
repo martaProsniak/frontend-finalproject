@@ -22,6 +22,7 @@ import { ProductAddComponent } from './components/product-add/product-add.compon
 import { LoginComponent } from './components/login/login.component';
 import {ProductsService} from './_services/products.service';
 import {AddHeadersInterceptor} from './_helpers/add-headers-interceptor';
+import { UsersProductsComponent} from './components/users-products/users-products.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import {AddHeadersInterceptor} from './_helpers/add-headers-interceptor';
     UserActivationComponent,
     HomeComponent,
     ProductAddComponent,
-    LoginComponent
+    LoginComponent,
+    UsersProductsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,21 @@
+<h3>{{'vocab.hello' | translate}} {{currentUser.name}}</h3>
+<button routerLink="/products-add"><i class="fas fa-plus-circle"></i></button>
+<table class="table table-striped">
+  <thead>
+  <th scope="col">Id</th>
+  <th scope="col">{{'vocab.photo' | translate}}</th>
+  <th scope="col">{{'vocab.product-name' | translate}}</th>
+  <th scope="col">{{'vocab.desc' | translate}}</th>
+  <th scope="col">{{'vocab.price' | translate}}</th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let good of goods">
+    <td>{{good.id}}</td>
+    <td *ngIf="good.available"><img [src]="good.url" ></td>
+    <td *ngIf="!good.available"><img [src]="good.url" style="filter: grayscale(100%);"></td>
+    <td>{{good.name}}</td>
+    <td>{{good.description}}</td>
+    <td>{{good.price}}</td>
+  </tr>
+  </tbody>
+</table>
