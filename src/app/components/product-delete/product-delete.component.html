@@ -1,0 +1,19 @@
+<div class="product_details">
+  <article class="product_photo"><img [src]="product.url" alt=""></article>
+  <h2>{{product.name | uppercase}}</h2>
+  <div><span>Id: </span>{{product.id}}</div>
+  <div><span>{{'vocab.product-name' | translate}}: </span>{{product.name}}</div>
+  <div><span>{{'vocab.desc' | translate}}: </span>{{product.description}}</div>
+  <div><span>{{'vocab.price' | translate}}: </span>{{product.price}}</div>
+  <div><span>{{'vocab.seller' | translate}}: </span>{{product.seller.login}}</div>
+  <div><span>{{'vocab.available' | translate}}: </span>{{product.available}}</div>
+  <button (click)="deleteProduct()">{{ 'vocab.delete' | translate }}</button>
+</div>
+<div id="button-container">
+  <button class="back" (click)="goBack()">{{'vocab.back' | translate}}: </button>
+</div>
+<div *ngIf="deleted">
+  <div class="deleted">
+    {{ 'vocab.product' | translate }} {{product.id}} {{'vocab.deleted' | translate}}!
+  </div>
+</div>

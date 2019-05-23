@@ -1,0 +1,46 @@
+<div *ngIf="!edited">
+<div class="product_details">
+  <div style="display: none"><span>id: </span>{{product.id}}</div>
+  <div>
+    <label>{{'vocab.name' | translate}}:
+      <input [(ngModel)]="product.name" placeholder="name"/>
+    </label>
+  </div>
+  <div>
+    <label>{{'vocab.price' | translate}}:
+      <input [(ngModel)]="product.price" placeholder="price"/>
+    </label>
+  </div>
+  <div>
+    <label>{{'vocab.desc' | translate}}:
+      <input [(ngModel)]="product.description" placeholder="description"/>
+    </label>
+  </div>
+  <div>
+    <label>{{'vocab.availability' | translate}}:
+      <input [(ngModel)]="product.available" placeholder="availability"/>
+    </label>
+  </div>
+  <div>
+    <label>{{'vocab.photo' | translate}}:
+      <input [(ngModel)]="product.url" placeholder="photo"/>
+    </label>
+  </div>
+  <div>
+    <label>{{'vocab.login' | translate}}:
+      <input [(ngModel)]="product.seller.login" placeholder="seller"/>
+    </label>
+  </div>
+  <button (click)="saveProductChanges()">{{'vocab.saveChanges' | translate}}</button>
+</div>
+
+  <div *ngIf="edited">
+    <div class="edited">
+      {{ 'vocab.product' | translate }} {{product.id}} {{'vocab.edited' | translate}}!
+    </div>
+  </div>
+
+<div id="button-container">
+  <button class="back" (click)="goBack()">{{'vocab.back' | translate}}</button>
+</div>
+</div>
