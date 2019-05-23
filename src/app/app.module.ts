@@ -21,6 +21,7 @@ import { HomeComponent } from './components/home/home.component';
 import {HomeService} from './services/home.service';
 import { ProductAddComponent } from './components/product-add/product-add.component';
 import { LoginComponent } from './components/login/login.component';
+import { ProductEditComponent } from './components/product-edit/product-edit.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { LoginComponent } from './components/login/login.component';
     UserActivationComponent,
     HomeComponent,
     ProductAddComponent,
-    LoginComponent
+    LoginComponent,
+    ProductEditComponent
   ],
   imports: [
     BrowserModule,
