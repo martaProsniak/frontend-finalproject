@@ -21,6 +21,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ProductAddComponent } from './components/product-add/product-add.component';
 import { LoginComponent } from './components/login/login.component';
 import {ProductsService} from './_services/products.service';
+import {AddHeadersInterceptor} from './_helpers/add-headers-interceptor';
 
 
 @NgModule({
@@ -55,7 +56,8 @@ import {ProductsService} from './_services/products.service';
   ],
   providers: [
     UsersService,
-    ProductsService
+    ProductsService,
+    AddHeadersInterceptor
   ],
   bootstrap: [AppComponent]
 })

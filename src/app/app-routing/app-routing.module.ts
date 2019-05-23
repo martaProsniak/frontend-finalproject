@@ -19,6 +19,7 @@ const appRoutes: Routes = [
   { path: 'users', component: UsersListComponent},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: UserAddComponent},
+  { path: 'users-add', component: UserAddComponent},
   { path: 'users/:id', component: UserDetailsComponent},
   { path: 'users/edit/:id', component: UserEditComponent },
   { path: 'users/delete/:id', component: UserDeleteComponent },
