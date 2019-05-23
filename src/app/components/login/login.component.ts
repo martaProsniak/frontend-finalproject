@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UsersService} from '../../services/users.service';
 import {User} from '../../models/user';
 import {Location} from '@angular/common';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,8 @@ export class LoginComponent implements OnInit {
   message: string;
 
   constructor(private location: Location,
-              private usersService: UsersService) {
+              private usersService: UsersService,
+              private router: Router) {
     this.user = new User();
 
   }
@@ -28,6 +30,7 @@ export class LoginComponent implements OnInit {
         user => {
           this.user = user;
           this.message = 'Hello ' + this.user.name + ' !';
+          this.router.navigate(['/products']);
         }
       );
   }
