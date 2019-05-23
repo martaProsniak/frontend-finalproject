@@ -16,7 +16,8 @@ export class UserAddComponent implements OnInit {
   message: string;
 
   constructor( private location: Location,
-               private usersService: UsersService) {
+               private usersService: UsersService,
+               private router: Router) {
     this.user = new User();
 
   }
@@ -29,7 +30,7 @@ export class UserAddComponent implements OnInit {
       .subscribe(
         user => {
           this.user = user;
-          this.message = 'Hello, ' + this.user.name + ', you\'re account has been created!';
+          this.router.navigate(['/login']);
         }
       );
   }

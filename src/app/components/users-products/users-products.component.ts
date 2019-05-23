@@ -12,7 +12,7 @@ import {AuthenticationService} from '../../_services/authentication.service';
   templateUrl: './users-products.component.html',
   styleUrls: ['./users-products.component.css']
 })
-export class UsersGoodsComponent implements OnInit {
+export class UsersProductsComponent implements OnInit {
 
   user: User = new User();
   goods: Product[];
