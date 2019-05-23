@@ -13,6 +13,8 @@ import {HomeComponent} from '../components/home/home.component';
 import {ProductAddComponent} from '../components/product-add/product-add.component';
 import {LoginComponent} from '../components/login/login.component';
 import {UsersProductsComponent} from '../components/users-products/users-products.component';
+import {ProductEditComponent} from '../components/product-edit/product-edit.component';
+import {ProductDeleteComponent} from '../components/product-delete/product-delete.component';
 
 
 const appRoutes: Routes = [
@@ -30,6 +32,9 @@ const appRoutes: Routes = [
   { path: 'products-users', component: UsersProductsComponent},
   { path: 'products/:id', component: ProductDetailsComponent},
   { path: 'products-add', component: ProductAddComponent},
+  { path: 'products-add', component: ProductAddComponent},
+  {path:  'products/edit/:id', component: ProductEditComponent},
+  { path: 'products/delete/:id', component: ProductDeleteComponent },
   { path: '**', redirectTo: ''}
 ];
 

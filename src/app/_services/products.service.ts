@@ -25,4 +25,14 @@ export class ProductsService {
   addNewProduct(product: Product): Observable<any> {
     return this.http.post(this.endpoint + '/add', product);
   }
+
+  updateProduct(product: Product): Observable<any> {
+    return this.http.put(this.endpoint + '/edit/' + product.id, product);
+  }
+
+  delete(product: Product): Observable<any> {
+    return this.http.delete(this.endpoint + '/delete/' + product.id);
+  }
+
+
 }

@@ -8,6 +8,8 @@
   <th scope="col">{{'vocab.price' | translate}}</th>
   <th scope="col">{{'vocab.availability' | translate}}</th>
   <th scope="col">{{'vocab.details' | translate}}</th>
+  <th scope="col">{{'vocab.edit' | translate}}</th>
+  <th scope="col">{{'vocab.delete' | translate}}</th>
   </thead>
   <tbody>
   <tr *ngFor="let product of products">
@@ -20,7 +22,10 @@
     <td>{{product.seller.login}}</td>
     <td *ngIf="product.available"><i class="fas fa-cart-plus"></i></td>
     <td *ngIf="!product.available">-</td>
+    <td>{{product.seller.login}}</td>
     <td><a routerLink="/products/{{product.id}}"><i class="fas fa-info-circle"></i></a></td>
+    <td><a routerLink="/products/edit/{{product.id}}"><i class="fas fa-edit"></i></a></td>
+    <td><a routerLink="/products/delete/{{product.id}}"><i class="fas fa-trash-alt"></i></a></td>
     <td>{{product.seller.login}}</td>
   </tr>
   </tbody>
