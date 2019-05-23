@@ -12,13 +12,15 @@
     </div>
   </div>
 </section>
+<h2>{{'vocab.hello' | translate}} {{currentUser.name}}</h2>
 <button class="pl" (click)="translatePl()">{{'vocab.pl' | translate}}</button>
 <button class="eng" (click)="translateEn()">{{'vocab.eng' | translate}}</button>
 <nav>
   <ul class="menu">
     <li><a routerLink="/users">{{'vocab.users' | translate}}</a></li>
     <li><a routerLink="/products">{{'vocab.products' | translate}}</a></li>
-    <li><a routerLink="/login">Login</a></li>
+    <li><a routerLink="/login">{{'vocab.log-in' | translate}}</a></li>
+    <li><a routerLink="/">{{'vocab.logout' | translate}}</a></li>
   </ul>
 </nav>
 <main><!--The content below is only a placeholder and can be replaced.-->

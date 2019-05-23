@@ -9,4 +9,5 @@ export class User {
   accepted: boolean;
   role: any;
   products: Product[];
+  token: string;
 }

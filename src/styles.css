@@ -30,6 +30,7 @@ input, select {
   background-color: #EFEFEF;
   border-color: mediumblue;
   color: blue;
+  float: right;
 }
 .eng:hover {
   background-color: blue;
@@ -41,6 +42,7 @@ input, select {
   background-color: #EFEFEF;
   border-color: red;
   color: red;
+  float: right;
 }
 .pl:hover {
   background-color: red;

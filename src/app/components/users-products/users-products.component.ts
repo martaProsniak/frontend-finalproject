@@ -1,28 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../../models/user';
+import {Product} from '../../models/product';
 import {UsersService} from '../../_services/users.service';
 import {ActivatedRoute} from '@angular/router';
-import { Location} from '@angular/common';
-import {Product} from '../../models/product';
+import {Location} from '@angular/common';
 import {ProductsService} from '../../_services/products.service';
+import {AuthenticationService} from '../../_services/authentication.service';
 
 @Component({
-  selector: 'app-user-details',
-  templateUrl: './user-details.component.html',
-  styleUrls: ['./user-details.component.css']
+  selector: 'app-users-products',
+  templateUrl: './users-products.component.html',
+  styleUrls: ['./users-products.component.css']
 })
-export class UserDetailsComponent implements OnInit {
+export class UsersGoodsComponent implements OnInit {
 
   user: User = new User();
   goods: Product[];
+  currentUser: User;
 
   constructor(private usersService: UsersService,
+              private authenticationService: AuthenticationService,
               private route: ActivatedRoute,
-              private location: Location,
-              private productsService: ProductsService) { }
+              private location: Location) { }
 
   ngOnInit() {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.authenticationService.currentUser.subscribe(currentUser =>
+    this.currentUser = currentUser);
+    const id = this.currentUser.id;
     this.usersService
       .getUserDetails(id)
       .subscribe(result => {
@@ -35,5 +39,6 @@ export class UserDetailsComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
 
 }

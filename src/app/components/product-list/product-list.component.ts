@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpErrorResponse} from '@angular/common/http';
 import {Product} from '../../models/product';
-import {ProductsService} from '../../services/products.service';
+import {ProductsService} from '../../_services/products.service';
+import {UsersService} from '../../_services/users.service';
 
 @Component({
   selector: 'app-product-list',
@@ -12,7 +13,7 @@ export class ProductListComponent implements OnInit {
 
   products: Product[];
 
-  constructor(private productService: ProductsService) {
+  constructor(private productService: ProductsService, private usersService: UsersService) {
   }
 
   ngOnInit(): void {
@@ -33,5 +34,4 @@ export class ProductListComponent implements OnInit {
           }
         });
   }
-
 }

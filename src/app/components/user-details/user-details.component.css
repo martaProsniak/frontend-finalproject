@@ -4,11 +4,17 @@
   width: 700px;
   text-align: center;
   background-color: #3ED682;
-  padding: 1em;
+  padding: 1em auto 2em auto;
   border: #474647 2px solid;
   border-bottom: none;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
+}
+
+.user_info {
+  text-align: center;
+  margin: 1em;
+  color: #474647;
 }
 
 #button-container{
@@ -31,5 +37,16 @@
 
 h2{
   font-family: 'Sniglet', cursive;
+  color: #474647;
+  margin-top: 5px;
 }
 
+i {
+  font-size: 100px;
+  color: #474647 !important;
+}
+
+i:hover {
+  cursor: pointer;
+  color: #99d6bc !important;
+}
