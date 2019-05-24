@@ -3,6 +3,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {User} from '../models/user';
 import {map} from 'rxjs/operators';
+import { CookieService} from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
@@ -14,9 +15,12 @@ export class AuthenticationService {
   private currentUserSubject: BehaviorSubject<any>;
   public currentUser: Observable<any>;
 
-  constructor(private http: HttpClient) {
-    this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(localStorage.getItem('currentUser')));
+  constructor(private http: HttpClient,
+              private cookieService: CookieService) {
+    const currentSession = localStorage.getItem('currentUser');
+    this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
     this.currentUser = this.currentUserSubject.asObservable();
+    cookieService.set('currentUser', currentSession);
   }
 
   public get currentUserValue() {
@@ -26,16 +30,15 @@ export class AuthenticationService {
   login(user: User): Observable<any> {
     return this.http.post(this.host + 'login', user)
       .pipe(map(currentUser => {
-        localStorage.setItem('currentUser', JSON.stringify(currentUser));
+        this.cookieService.set('currentUser', JSON.stringify(currentUser));
         this.currentUserSubject.next(currentUser);
         return currentUser;
   }));
   }
-  logout() {
+  logout(): null {
     this.currentUserSubject.next(null);
-    this.currentUser = null;
-    localStorage.removeItem('currentUser');
-    localStorage.clear();
+    this.cookieService.delete('currentUser');
+    return null;
   }
 }
 

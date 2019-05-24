@@ -25,6 +25,7 @@ import { ProductDeleteComponent } from './components/product-delete/product-dele
 import {ProductsService} from './_services/products.service';
 import {AddHeadersInterceptor} from './_helpers/add-headers-interceptor';
 import { UsersProductsComponent} from './components/users-products/users-products.component';
+import {CookieService} from 'ngx-cookie-service';
 
 
 @NgModule({
@@ -63,7 +64,8 @@ import { UsersProductsComponent} from './components/users-products/users-product
   providers: [
     UsersService,
     ProductsService,
-    AddHeadersInterceptor
+    AddHeadersInterceptor,
+    CookieService
   ],
   bootstrap: [AppComponent]
 })

@@ -12,7 +12,7 @@
     </div>
   </div>
 </section>
-<h2>
+<h2 *ngIf="currentUser">
   <i class="fas fa-user-edit" routerLink="/users/edit/{{currentUser.id}}"   ></i>
   {{'vocab.hello' | translate}} {{currentUser.name}}!
 </h2>
