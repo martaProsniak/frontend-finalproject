@@ -6,6 +6,9 @@
   <th scope="col">{{'vocab.product-name' | translate}}</th>
   <th scope="col">{{'vocab.desc' | translate}}</th>
   <th scope="col">{{'vocab.price' | translate}}</th>
+  <th scope="col">{{'vocab.available' | translate}}</th>
+  <th scope="col">{{'vocab.edit' | translate}}</th>
+  <th scope="col">{{'vocab.delete' | translate}}</th>
   </thead>
   <tbody>
   <tr *ngFor="let good of goods">
@@ -15,6 +18,9 @@
     <td>{{good.name}}</td>
     <td>{{good.description}}</td>
     <td>{{good.price}}</td>
+    <td>{{good.available}}</td>
+    <td><a *ngIf="good.available" routerLink="/products/edit/{{good.id}}"><i class="fas fa-edit"></i></a></td>
+    <td><a *ngIf="good.available" routerLink="/products/delete/{{good.id}}"><i class="fas fa-trash-alt"></i></a></td>
   </tr>
   </tbody>
 </table>
