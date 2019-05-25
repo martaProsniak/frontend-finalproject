@@ -20,7 +20,10 @@ export class UsersProductsComponent implements OnInit {
   constructor(private usersService: UsersService,
               private authenticationService: AuthenticationService,
               private route: ActivatedRoute,
-              private location: Location) { }
+              private location: Location) {
+    this.authenticationService.currentUser.subscribe(currentUser =>
+      this.currentUser = currentUser);
+  }
 
   ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
