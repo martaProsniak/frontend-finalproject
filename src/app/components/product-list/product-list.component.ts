@@ -4,7 +4,6 @@ import {Product} from '../../models/product';
 import {ProductsService} from '../../_services/products.service';
 import {AuthenticationService} from '../../_services/authentication.service';
 import {User} from '../../models/user';
-import {Router} from '@angular/router';
 import {CartService} from '../../_services/cart.service';
 import {Cart} from '../../models/cart';
 
@@ -20,9 +19,7 @@ export class ProductListComponent implements OnInit {
 
   constructor(private productService: ProductsService,
               private authService: AuthenticationService,
-              private cartService: CartService,
-              private router: Router) {
-    this.authService.currentUser.subscribe(x => this.currentUser = x);
+              private cartService: CartService) {
   }
 
   ngOnInit(): void {
@@ -43,4 +40,20 @@ export class ProductListComponent implements OnInit {
           }
         });
   }
+
+  addToCart(productId: number) {
+    const userId = this.currentUser.id;
+    let cart: Cart;
+    if (this.currentUser.cart == null) {
+      cart = new Cart();
+    } else {
+      cart = this.currentUser.cart;
+    }
+    console.log(productId);
+    this.cartService.addToCart(userId, productId, cart)
+      .subscribe(result =>
+        this.currentUser.cart = result);
+    console.log('success');
+  }
+
 }

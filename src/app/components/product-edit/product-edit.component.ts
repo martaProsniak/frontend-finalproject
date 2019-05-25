@@ -3,6 +3,7 @@ import {Product} from '../../models/product';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 import {ProductsService} from '../../_services/products.service';
+import {Cart} from '../../models/cart';
 
 @Component({
   selector: 'app-product-edit',
@@ -15,15 +16,16 @@ export class ProductEditComponent implements OnInit {
 
   constructor(private productService: ProductsService,
               private route: ActivatedRoute,
-              private location: Location) { }
+              private location: Location) {
+  }
 
   ngOnInit() {
-  const id = Number(this.route.snapshot.paramMap.get('id'));
-  this.productService
-    .getProductDetails(id)
-    .subscribe(result => {
-    this.product = result;
-    });
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.productService
+      .getProductDetails(id)
+      .subscribe(result => {
+        this.product = result;
+      });
   }
 
   saveProductChanges() {
@@ -39,4 +41,5 @@ export class ProductEditComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
 }

@@ -4,7 +4,7 @@ import {UsersService} from '../../_services/users.service';
 import {ActivatedRoute} from '@angular/router';
 import { Location} from '@angular/common';
 import {Product} from '../../models/product';
-import {ProductsService} from '../../_services/products.service';
+import {AuthenticationService} from '../../_services/authentication.service';
 
 @Component({
   selector: 'app-user-details',
@@ -15,10 +15,14 @@ export class UserDetailsComponent implements OnInit {
 
   user: User = new User();
   goods: Product[];
+  currentUser: User;
 
   constructor(private usersService: UsersService,
               private route: ActivatedRoute,
-              private location: Location) { }
+              private location: Location,
+              private authService: AuthenticationService) {
+    this.authService.currentUser.subscribe(x => this.currentUser = x);
+  }
 
   ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));

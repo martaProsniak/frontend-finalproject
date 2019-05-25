@@ -21,7 +21,7 @@
     <td>{{product.description}}</td>
     <td>{{product.price}}</td>
     <td>{{product.seller.login}}</td>
-    <td *ngIf="product.available"><a *ngIf="currentUser" routerLink="/cart/add/product/{{product.id}}/{{currentUser.id}}"><i class="fas fa-cart-plus"></i></a></td>
+    <td *ngIf="product.available"><a *ngIf="currentUser" (click)="addToCart(product.id)"><i class="fas fa-cart-plus"></i></a></td>
     <td *ngIf="!product.available">-</td>
     <td><a routerLink="/products/{{product.id}}"><i class="fas fa-info-circle"></i></a></td>
     <td><a routerLink="/products/edit/{{product.id}}"><i class="fas fa-edit"></i></a></td>
