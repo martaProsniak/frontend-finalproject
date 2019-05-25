@@ -20,6 +20,8 @@ export class ProductListComponent implements OnInit {
   constructor(private productService: ProductsService,
               private authService: AuthenticationService,
               private cartService: CartService) {
+    this.authService.currentUser.subscribe(currentUser =>
+      this.currentUser = currentUser);
   }
 
   ngOnInit(): void {

@@ -14,7 +14,7 @@
 </section>
 <h2 *ngIf="currentUser">
   <i class="fas fa-user-edit" routerLink="/users/edit/{{currentUser.id}}"   ></i>
-  {{'vocab.hello' | translate}} {{currentUser.name}}!
+  {{'vocab.hello' | translate}}!
 </h2>
 <button class="pl" (click)="translatePl()">{{'vocab.pl' | translate}}</button>
 <button class="eng" (click)="translateEn()">{{'vocab.eng' | translate}}</button>

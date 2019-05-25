@@ -27,7 +27,7 @@ export class CartComponent implements OnInit {
 
   ngOnInit() {
     const userId = this.currentUser.id;
-    const cartId = this.usersService.getUserDetails(userId).
+    this.usersService.getUserDetails(userId).
     subscribe(result => {
       this.cart = result.cart;
       this.purchases = this.cart.products;
