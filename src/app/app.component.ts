@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {TranslateService} from '@ngx-translate/core';
 import {Router} from '@angular/router';
 import {AuthenticationService} from './_services/authentication.service';
+import {User} from './models/user';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ import {AuthenticationService} from './_services/authentication.service';
 })
 export class AppComponent {
   title = 'Connect.com';
-  currentUser: any;
+  currentUser: User;
 
   constructor(private http: HttpClient,
               private translate: TranslateService,

@@ -15,6 +15,7 @@ import {LoginComponent} from '../components/login/login.component';
 import {UsersProductsComponent} from '../components/users-products/users-products.component';
 import {ProductEditComponent} from '../components/product-edit/product-edit.component';
 import {ProductDeleteComponent} from '../components/product-delete/product-delete.component';
+import {CartComponent} from '../components/cart/cart.component';
 
 
 const appRoutes: Routes = [
@@ -29,12 +30,13 @@ const appRoutes: Routes = [
   { path: 'users/activate/:id', component: UserActivationComponent },
   { path: 'users/deactivate/:id', component: UserActivationComponent },
   { path: 'products', component: ProductListComponent},
-  { path: 'products-users', component: UsersProductsComponent},
+  { path: 'products-users/:id', component: UsersProductsComponent},
   { path: 'products/:id', component: ProductDetailsComponent},
   { path: 'products-add', component: ProductAddComponent},
   { path: 'products-add', component: ProductAddComponent},
-  { path:  'products/edit/:id', component: ProductEditComponent},
+  { path: 'products/edit/:id', component: ProductEditComponent},
   { path: 'products/delete/:id', component: ProductDeleteComponent },
+  { path: 'cart/add/product/:productId/:userId', component: CartComponent},
   { path: '**', redirectTo: ''}
 ];
 

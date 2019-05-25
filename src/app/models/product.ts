@@ -1,4 +1,5 @@
 import {User} from './user';
+import {Cart} from './cart';
 
 export class Product {
   id: number;
@@ -8,4 +9,5 @@ export class Product {
   available: boolean;
   url: string;
   seller: User;
+  cart: Cart;
 }

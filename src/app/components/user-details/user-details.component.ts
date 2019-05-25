@@ -18,8 +18,7 @@ export class UserDetailsComponent implements OnInit {
 
   constructor(private usersService: UsersService,
               private route: ActivatedRoute,
-              private location: Location,
-              private productsService: ProductsService) { }
+              private location: Location) { }
 
   ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));

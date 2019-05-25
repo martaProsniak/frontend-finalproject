@@ -4,7 +4,6 @@ import {Product} from '../../models/product';
 import {UsersService} from '../../_services/users.service';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
-import {ProductsService} from '../../_services/products.service';
 import {AuthenticationService} from '../../_services/authentication.service';
 
 @Component({
@@ -24,9 +23,7 @@ export class UsersProductsComponent implements OnInit {
               private location: Location) { }
 
   ngOnInit() {
-    this.authenticationService.currentUser.subscribe(currentUser =>
-    this.currentUser = currentUser);
-    const id = this.currentUser.id;
+    const id = Number(this.route.snapshot.paramMap.get('id'));
     this.usersService
       .getUserDetails(id)
       .subscribe(result => {
@@ -39,6 +36,4 @@ export class UsersProductsComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
-
-
 }

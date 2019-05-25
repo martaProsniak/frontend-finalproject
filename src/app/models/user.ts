@@ -1,4 +1,5 @@
 import {Product} from './product';
+import {Cart} from './cart';
 
 export class User {
   id: number;
@@ -9,5 +10,5 @@ export class User {
   accepted: boolean;
   role: any;
   products: Product[];
-  token: string;
+  cart: Cart;
 }

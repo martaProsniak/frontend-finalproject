@@ -26,6 +26,8 @@ import {ProductsService} from './_services/products.service';
 import {AddHeadersInterceptor} from './_helpers/add-headers-interceptor';
 import { UsersProductsComponent} from './components/users-products/users-products.component';
 import {CookieService} from 'ngx-cookie-service';
+import { CartComponent } from './components/cart/cart.component';
+import {CartService} from './_services/cart.service';
 
 
 @NgModule({
@@ -44,7 +46,8 @@ import {CookieService} from 'ngx-cookie-service';
     LoginComponent,
     ProductEditComponent,
     ProductDeleteComponent,
-    UsersProductsComponent
+    UsersProductsComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -64,6 +67,7 @@ import {CookieService} from 'ngx-cookie-service';
   providers: [
     UsersService,
     ProductsService,
+    CartService,
     AddHeadersInterceptor,
     CookieService
   ],
