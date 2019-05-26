@@ -13,7 +13,7 @@ td a{
   color: #474647;
 }
 
-td a:hover{
+td a:hover, i:hover{
   text-decoration: none;
   cursor: pointer;
   color: #3ED682;
@@ -26,3 +26,4 @@ h3 {
   font-family: 'Sniglet', cursive;
   font-size: 1.5em;
 }
+

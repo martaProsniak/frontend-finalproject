@@ -47,5 +47,6 @@ export class CartComponent implements OnInit {
   removeFromCart(productId: number) {
     this.cartService.remove(this.cart.id, productId, this.cart)
       .subscribe(cart => this.cart = cart);
+    this.ngOnInit();
   }
 }

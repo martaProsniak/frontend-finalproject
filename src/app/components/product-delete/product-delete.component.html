@@ -8,12 +8,13 @@
   <div><span>{{'vocab.seller' | translate}}: </span>{{product.seller.login}}</div>
   <div><span>{{'vocab.available' | translate}}: </span>{{product.available}}</div>
   <button (click)="deleteProduct()">{{ 'vocab.delete' | translate }}</button>
+  <div *ngIf="deleted">
+    <div class="deleted">
+      {{ 'vocab.product' | translate }} {{product.id}} {{'vocab.deleted' | translate}}!
+    </div>
+  </div>
 </div>
 <div id="button-container">
   <button class="back" (click)="goBack()">{{'vocab.back' | translate}}: </button>
 </div>
-<div *ngIf="deleted">
-  <div class="deleted">
-    {{ 'vocab.product' | translate }} {{product.id}} {{'vocab.deleted' | translate}}!
-  </div>
-</div>
+
