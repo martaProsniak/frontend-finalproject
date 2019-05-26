@@ -6,8 +6,8 @@
   <div class="user_info"><span>Login: </span>{{user.login}}</div>
   <div class="user_info"><span>{{ 'vocab.activated' | translate }}: </span>{{user.accepted}}</div>
   <div class="user_info"><span>{{ 'vocab.role' | translate }}: </span>{{user.role}}</div>
-  <div routerLink="/products-users/{{user.id}}"><i class="fas fa-store-alt"></i></div>
-  <div routerLink="/cart/users/{{user.id}}"><i class="fas fa-cart-plus"></i></div>
+  <div><button routerLink="/products-users/{{user.id}}"><i class="fas fa-store-alt"></i></button></div>
+  <div><button routerLink="/cart/users/{{user.id}}"><i class="fas fa-cart-plus"></i></button></div>
 </div>
 <div id="button-container">
   <button class="back" (click)="goBack()">{{'vocab.back' | translate}}</button>

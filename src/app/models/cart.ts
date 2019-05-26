@@ -5,4 +5,5 @@ export class Cart {
   id: number;
   products: Product[];
   buyer: User;
+  cartValue: number;
 }

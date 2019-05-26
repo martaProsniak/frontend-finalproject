@@ -1,22 +1,27 @@
-<h3>{{'vocab.user-cart' | translate}} {{currentUser.login}}</h3>
-<table class="table table-striped">
-  <thead>
-  <th scope="col">Id</th>
-  <th scope="col">{{'vocab.photo' | translate}}</th>
-  <th scope="col">{{'vocab.product-name' | translate}}</th>
-  <th scope="col">{{'vocab.desc' | translate}}</th>
-  <th scope="col">{{'vocab.price' | translate}}</th>
-  </thead>
-  <tbody>
-  <tr *ngFor="let purchase of purchases">
-    <td>{{purchase.id}}</td>
-    <td><img [src]="purchase.url" ></td>
-    <td>{{purchase.name}}</td>
-    <td>{{purchase.description}}</td>
-    <td>{{purchase.price}}</td>
-    <td>{{purchase.available}}</td>
-    <td>{{purchase.seller.login}}</td>
-  </tr>
-  </tbody>
-</table>
-<button routerLink="/products">Back to products</button>
+<div *ngIf="loggedIn">
+  <h3>{{'vocab.user-cart' | translate}} {{currentUser.login}}</h3>
+  <table class="table table-striped">
+    <thead>
+    <th scope="col">Id</th>
+    <th scope="col">{{'vocab.photo' | translate}}</th>
+    <th scope="col">{{'vocab.product-name' | translate}}</th>
+    <th scope="col">{{'vocab.desc' | translate}}</th>
+    <th scope="col">{{'vocab.price' | translate}}</th>
+    <th scope="col">{{'vocab.delete' | translate}}</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let purchase of purchases">
+      <td>{{purchase.id}}</td>
+      <td><img [src]="purchase.url"></td>
+      <td>{{purchase.name}}</td>
+      <td>{{purchase.description}}</td>
+      <td>{{purchase.price}}</td>
+      <td>{{purchase.available}}</td>
+      <td>{{purchase.seller.login}}</td>
+      <td><i (click)="removeFromCart(purchase.id)" class="fas fa-trash-alt"></i></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<button routerLink="/products">{{'vocab.products' | translate}}</button>
+<p>{{cart.cartValue}}</p>

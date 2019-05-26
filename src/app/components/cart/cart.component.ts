@@ -1,10 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Cart} from '../../models/cart';
 import {CartService} from '../../_services/cart.service';
 import {AuthenticationService} from '../../_services/authentication.service';
 import {Product} from '../../models/product';
 import {User} from '../../models/user';
 import {UsersService} from '../../_services/users.service';
+import {Router} from '@angular/router';
+import {isObject} from 'rxjs/internal-compatibility';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-cart',
@@ -17,35 +20,32 @@ export class CartComponent implements OnInit {
   purchases: Product[];
   currentUser: User;
   product: Product;
+  loggedIn: boolean;
 
   constructor(private cartService: CartService,
               private usersService: UsersService,
-              private authService: AuthenticationService) {
-    this.authService.currentUser.subscribe(currentUser =>
-      this.currentUser = currentUser);
+              private authService: AuthenticationService,
+              private router: Router) {
   }
 
   ngOnInit() {
-    const userId = this.currentUser.id;
-    this.usersService.getUserDetails(userId).
-    subscribe(result => {
-      this.cart = result.cart;
-      this.purchases = this.cart.products;
-    });
-  }
-
-  addToCart(productId: number) {
-    const userId = this.currentUser.id;
-    let cart: Cart;
-    if (this.currentUser.cart == null) {
-      cart = new Cart();
+    if (!isObject(this.authService.currentUser)) {
+      this.loggedIn = false;
+      this.router.navigate(['/login']);
     } else {
-      cart = this.currentUser.cart;
+      this.authService.currentUser.subscribe(currentUser =>
+        this.currentUser = currentUser);
+      const userId = this.currentUser.id;
+      this.loggedIn = true;
+      this.usersService.getUserDetails(userId).subscribe(result => {
+        this.cart = result.cart;
+        this.purchases = this.cart.products;
+      });
     }
-    console.log(productId);
-    this.cartService.addToCart(userId, productId, cart)
-      .subscribe(result => this.cart = result);
-    console.log('success');
   }
 
+  removeFromCart(productId: number) {
+    this.cartService.remove(this.cart.id, productId, this.cart)
+      .subscribe(cart => this.cart = cart);
+  }
 }

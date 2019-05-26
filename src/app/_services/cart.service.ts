@@ -27,4 +27,9 @@ export class CartService {
   getCarts(): Observable<Cart[]> {
     return this.http.get<Cart[]>(this.endpoint + '/list');
   }
+
+  remove(cartId: number, productId: number, cart: Cart): Observable<any> {
+    return this.http.put(this.endpoint + '/' + cartId +
+    '/deleteProduct/' + productId, cart);
+  }
 }

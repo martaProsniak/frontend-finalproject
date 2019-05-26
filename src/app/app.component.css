@@ -126,8 +126,12 @@ h2 {
   font-family: 'Sniglet', cursive;
 }
 
+i {
+  color: #474647 !important;
+}
+
 i:hover{
   cursor: pointer;
-  color: #3ED682;
+  color: #3ED682 !important;
 }
 

@@ -35,10 +35,9 @@ export class AuthenticationService {
         return currentUser;
   }));
   }
-  logout(): null {
+  logout() {
     this.currentUserSubject.next(null);
     this.cookieService.delete('currentUser');
-    return null;
   }
 }
 

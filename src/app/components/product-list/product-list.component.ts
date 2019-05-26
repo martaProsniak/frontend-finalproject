@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpErrorResponse} from '@angular/common/http';
 import {Product} from '../../models/product';
 import {ProductsService} from '../../_services/products.service';
@@ -6,6 +6,7 @@ import {AuthenticationService} from '../../_services/authentication.service';
 import {User} from '../../models/user';
 import {CartService} from '../../_services/cart.service';
 import {Cart} from '../../models/cart';
+
 
 @Component({
   selector: 'app-product-list',
@@ -46,7 +47,7 @@ export class ProductListComponent implements OnInit {
   addToCart(productId: number) {
     const userId = this.currentUser.id;
     let cart: Cart;
-    if (this.currentUser.cart == null) {
+    if (this.currentUser.cart === null) {
       cart = new Cart();
     } else {
       cart = this.currentUser.cart;

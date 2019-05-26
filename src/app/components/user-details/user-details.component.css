@@ -42,11 +42,11 @@ h2{
 }
 
 i {
-  font-size: 100px;
-  color: #474647 !important;
+  color: #3ED682 !important;
 }
 
 i:hover {
   cursor: pointer;
-  color: #99d6bc !important;
+  color: #474647 !important;
 }
+

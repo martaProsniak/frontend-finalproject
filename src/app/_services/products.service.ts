@@ -22,8 +22,8 @@ export class ProductsService {
       .get<Product>(this.endpoint + '/' + id);
   }
 
-  addNewProduct(product: Product): Observable<any> {
-    return this.http.post(this.endpoint + '/add', product);
+  addNewProduct(product: Product, userId: number): Observable<any> {
+    return this.http.post(this.endpoint + '/add/' + userId, product);
   }
 
   updateProduct(product: Product): Observable<any> {
