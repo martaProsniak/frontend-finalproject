@@ -28,6 +28,7 @@ import { UsersProductsComponent} from './components/users-products/users-product
 import {CookieService} from 'ngx-cookie-service';
 import { CartComponent } from './components/cart/cart.component';
 import {CartService} from './_services/cart.service';
+import { ProductJsonComponent } from './components/product-json/product-json.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import {CartService} from './_services/cart.service';
     ProductEditComponent,
     ProductDeleteComponent,
     UsersProductsComponent,
-    CartComponent
+    CartComponent,
+    ProductJsonComponent
   ],
   imports: [
     BrowserModule,

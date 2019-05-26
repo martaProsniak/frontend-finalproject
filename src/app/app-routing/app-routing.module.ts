@@ -16,6 +16,7 @@ import {UsersProductsComponent} from '../components/users-products/users-product
 import {ProductEditComponent} from '../components/product-edit/product-edit.component';
 import {ProductDeleteComponent} from '../components/product-delete/product-delete.component';
 import {CartComponent} from '../components/cart/cart.component';
+import {ProductJsonComponent} from '../components/product-json/product-json.component';
 
 
 const appRoutes: Routes = [
@@ -30,6 +31,7 @@ const appRoutes: Routes = [
   { path: 'users/activate/:id', component: UserActivationComponent },
   { path: 'users/deactivate/:id', component: UserActivationComponent },
   { path: 'products', component: ProductListComponent},
+  { path: 'products-json', component: ProductJsonComponent},
   { path: 'products-users/:id', component: UsersProductsComponent},
   { path: 'products/:id', component: ProductDetailsComponent},
   { path: 'products-add', component: ProductAddComponent},
