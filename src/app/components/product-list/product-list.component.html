@@ -19,9 +19,11 @@
     <td>{{product.description}}</td>
     <td>{{product.price}}</td>
     <td *ngIf="loggedIn">{{product.seller.login}}</td>
+
     <td *ngIf="product.available && !loggedIn"><i class="fas fa-cart-plus"></i></td>
-    <td *ngIf="product.available && loggedIn"><a (click)="addToCart(product.id)"><i class="fas fa-cart-plus"></i></a></td>
-    <td *ngIf="!product.available"></td>
+    <td *ngIf="product.available && loggedIn && !(product.seller.login === currentUser.login)"><a (click)="addToCart(product.id)"><i class="fas fa-cart-plus"></i></a></td>
+    <td *ngIf="!product.available || (loggedIn && product.seller.login === currentUser.login)"></td>
+
     <td *ngIf="loggedIn"><a routerLink="products/{{product.id}}"><i class="fas fa-info-circle"></i></a></td>
   </tr>
   </tbody>

@@ -7,7 +7,7 @@ import {User} from '../../models/user';
 import {CartService} from '../../_services/cart.service';
 import {Cart} from '../../models/cart';
 import {isObject} from 'rxjs/internal-compatibility';
-import {Role} from '../../models/role';
+
 
 
 @Component({
@@ -20,6 +20,7 @@ export class ProductListComponent implements OnInit {
   products: Product[];
   currentUser: User;
   loggedIn = false;
+  isSeller;
 
 
   constructor(private productService: ProductsService,
