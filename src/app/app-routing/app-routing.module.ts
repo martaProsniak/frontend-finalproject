@@ -18,11 +18,13 @@ import {ProductDeleteComponent} from '../components/product-delete/product-delet
 import {CartComponent} from '../components/cart/cart.component';
 import {ProductJsonComponent} from '../components/product-json/product-json.component';
 import {OrderComponent} from '../components/order/order.component';
+import {AuthGuard} from '../_guards/auth-guard';
+import {Role} from '../models/role';
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'users', component: UsersListComponent},
+  { path: 'users', component: UsersListComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin]}},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: UserAddComponent},
   { path: 'users-add', component: UserAddComponent},
