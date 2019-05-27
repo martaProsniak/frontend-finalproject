@@ -57,6 +57,7 @@ export class ProductListComponent implements OnInit {
       .subscribe(result =>
         this.currentUser.cart = result);
     console.log('success');
+    this.ngOnInit();
   }
 
 }

@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {RouterModule, Routes} from '@angular/router';
 import {UserDetailsComponent} from '../components/user-details/user-details.component';
 import {UsersListComponent} from '../components/users-list/users-list.component';
@@ -27,15 +27,14 @@ const appRoutes: Routes = [
   { path: 'users', component: UsersListComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin]}},
   { path: 'login', component: LoginComponent},
   { path: 'register', component: UserAddComponent},
-  { path: 'users-add', component: UserAddComponent},
-  { path: 'users/:id', component: UserDetailsComponent},
-  { path: 'users/edit/:id', component: UserEditComponent },
-  { path: 'users/delete/:id', component: UserDeleteComponent },
-  { path: 'users/activate/:id', component: UserActivationComponent },
-  { path: 'users/deactivate/:id', component: UserActivationComponent },
-  { path: 'products', component: ProductListComponent},
-  { path: 'products-json', component: ProductJsonComponent},
-  { path: 'products-users/:id', component: UsersProductsComponent},
+  { path: 'users-add', component: UserAddComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin]}},
+  { path: 'users/:id', component: UserDetailsComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin]}},
+  { path: 'users/edit/:id', component: UserEditComponent, canActivate: [AuthGuard]},
+  { path: 'users/delete/:id', component: UserDeleteComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin]} },
+  { path: 'users/activate/:id', component: UserActivationComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin]} },
+  { path: 'products', component: ProductListComponent, canActivate: [AuthGuard]},
+  { path: 'products-json', component: ProductJsonComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin]}},
+  { path: 'products-users/:id', component: UsersProductsComponent, canActivate: [AuthGuard]},
   { path: 'products/:id', component: ProductDetailsComponent},
   { path: 'products-add', component: ProductAddComponent},
   { path: 'products-add', component: ProductAddComponent},
