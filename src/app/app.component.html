@@ -24,8 +24,8 @@
     <li><a routerLink="/users">{{'vocab.users' | translate}}</a></li>
     <li><a routerLink="/products">{{'vocab.products' | translate}}</a></li>
     <li><a routerLink="/register">{{'vocab.sign-up' | translate}}</a></li>
-    <li><a routerLink="/login">{{'vocab.log-in' | translate}}</a></li>
-    <li><a routerLink="/">{{'vocab.logout' | translate}}</a></li>
+    <li *ngIf="!currentUser"><a routerLink="/login">{{'vocab.log-in' | translate}}</a></li>
+    <li *ngIf="currentUser"><a routerLink="/">{{'vocab.logout' | translate}}</a></li>
   </ul>
 </nav>
 <main><!--The content below is only a placeholder and can be replaced.-->

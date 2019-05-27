@@ -20,7 +20,7 @@ export class ProductListComponent implements OnInit {
   products: Product[];
   currentUser: User;
   loggedIn = false;
-  isAdmin = false;
+
 
   constructor(private productService: ProductsService,
               private authService: AuthenticationService,

@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {TranslateService} from '@ngx-translate/core';
 import {Router} from '@angular/router';
 import {AuthenticationService} from './_services/authentication.service';
 import {User} from './models/user';
+import {isObject} from 'rxjs/internal-compatibility';
+import {Role} from './models/role';
 
 @Component({
   selector: 'app-root',
@@ -13,16 +15,16 @@ import {User} from './models/user';
 export class AppComponent {
   title = 'Connect.com';
   currentUser: User;
-  loggedIn = false;
 
   constructor(private http: HttpClient,
               private translate: TranslateService,
               private router: Router,
               private authService: AuthenticationService) {
     translate.setDefaultLang('en');
-    this.authService.currentUser.subscribe(x => this.currentUser = x);
+    this.authService.currentUser.subscribe(x => {
+      this.currentUser = x;
+    });
   }
-
 
   logout() {
     console.log(this.currentUser);
