@@ -7,7 +7,6 @@ import {User} from '../../models/user';
 import {UsersService} from '../../_services/users.service';
 import {Router} from '@angular/router';
 import {isObject} from 'rxjs/internal-compatibility';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-cart',

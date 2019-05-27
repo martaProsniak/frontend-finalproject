@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Cart} from '../../models/cart';
 import {CartService} from '../../_services/cart.service';
 import {AuthenticationService} from '../../_services/authentication.service';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {User} from '../../models/user';
 import {isObject} from 'rxjs/internal-compatibility';
 import {Order} from '../../models/order';
@@ -58,4 +58,5 @@ export class OrderComponent implements OnInit {
       ' ' + this.country;
     return this.order;
   }
+
 }
