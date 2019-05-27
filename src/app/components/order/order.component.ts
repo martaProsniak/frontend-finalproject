@@ -19,11 +19,16 @@ export class OrderComponent implements OnInit {
   currentUser: User;
   loggedIn: boolean;
   cart: Cart;
+  street: string;
+  postcode: string;
+  town: string;
+  country: string;
 
   constructor(private cartService: CartService,
               private authService: AuthenticationService,
               private orderService: OrderService,
               private router: Router) {
+    this.order = new Order();
   }
 
   ngOnInit() {
@@ -39,7 +44,7 @@ export class OrderComponent implements OnInit {
   }
 
   postOrder() {
-    this.orderService.createOrder(this.cart.id, 'jjfdrtdjy', this.createOrder())
+    this.orderService.createOrder(this.createOrder())
       .subscribe(order => this.order = order);
   }
 
@@ -49,6 +54,8 @@ export class OrderComponent implements OnInit {
     this.order.cart = this.currentUser.cart;
     this.order.login = this.currentUser.login;
     this.order.value = this.order.cart.cartValue;
+    this.order.address = this.street + ' ' + this.postcode + ' ' + this.town +
+      ' ' + this.country;
     return this.order;
   }
 }

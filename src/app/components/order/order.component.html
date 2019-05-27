@@ -1,5 +1,27 @@
-
-  <button (click)="postOrder()">Create order</button>
+<div class="order">
+  <h2>Order</h2>
+  <div>
+    <label>{{'vocab.street' | translate}}:
+      <input [(ngModel)]="street" placeholder="{{'vocab.street' | translate}}"/>
+    </label>
+  </div>
+  <div>
+    <label>{{'vocab.postcode' | translate}}:
+      <input [(ngModel)]="postcode" placeholder="{{'vocab.postcode' | translate}}"/>
+    </label>
+  </div>
+  <div>
+    <label>{{'vocab.town' | translate}}:
+      <input [(ngModel)]="town" placeholder="{{'vocab.town' | translate}}"/>
+    </label>
+  </div>
+  <div>
+    <label>{{'vocab.country' | translate}}:
+      <input [(ngModel)]="country" placeholder="{{'vocab.country' | translate}}"/>
+    </label>
+  </div>
+  <button (click)="postOrder()">{{'vocab.save-changes' | translate}}</button>
+</div>
 <div id="button-container">
   <button class="back" (click)="goBack()">{{'vocab.back' | translate}}</button>
 </div>
