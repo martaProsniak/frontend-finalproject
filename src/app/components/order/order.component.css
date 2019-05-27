@@ -1,0 +1,12 @@
+.user_details {
+  margin: 2em auto 0 auto;
+  height: 400px;
+  width: 700px;
+  text-align: center;
+  background-color: #3ED682;
+  padding: 1em;
+  border: #474647 2px solid;
+  border-bottom: none;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}

@@ -17,6 +17,7 @@ import {ProductEditComponent} from '../components/product-edit/product-edit.comp
 import {ProductDeleteComponent} from '../components/product-delete/product-delete.component';
 import {CartComponent} from '../components/cart/cart.component';
 import {ProductJsonComponent} from '../components/product-json/product-json.component';
+import {OrderComponent} from '../components/order/order.component';
 
 
 const appRoutes: Routes = [
@@ -39,6 +40,7 @@ const appRoutes: Routes = [
   { path: 'products/edit/:id', component: ProductEditComponent},
   { path: 'products/delete/:id', component: ProductDeleteComponent },
   { path: 'cart/users/:id', component: CartComponent},
+  { path: 'order/add', component: OrderComponent},
   { path: '**', redirectTo: ''}
 ];
 
