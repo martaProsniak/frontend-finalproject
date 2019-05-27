@@ -6,6 +6,8 @@ import {AuthenticationService} from '../../_services/authentication.service';
 import {User} from '../../models/user';
 import {CartService} from '../../_services/cart.service';
 import {Cart} from '../../models/cart';
+import {isObject} from 'rxjs/internal-compatibility';
+import {Role} from '../../models/role';
 
 
 @Component({
@@ -17,6 +19,8 @@ export class ProductListComponent implements OnInit {
 
   products: Product[];
   currentUser: User;
+  loggedIn = false;
+  isAdmin = false;
 
   constructor(private productService: ProductsService,
               private authService: AuthenticationService,
@@ -30,6 +34,9 @@ export class ProductListComponent implements OnInit {
   }
 
   getProducts(): void {
+    if (isObject(this.currentUser)) {
+      this.loggedIn = true;
+    }
     this.productService
       .getProductsTable()
       .subscribe(productList => {

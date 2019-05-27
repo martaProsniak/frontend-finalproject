@@ -1,4 +1,4 @@
-<button routerLink="/products-add"><i class="fas fa-plus-circle"></i></button>
+<button *ngIf="loggedIn" routerLink="/products-add"><i class="fas fa-plus-circle"></i></button>
 <table class="table table-striped">
   <thead>
   <th scope="col">Id</th>
@@ -6,11 +6,9 @@
   <th scope="col">{{'vocab.product-name' | translate}}</th>
   <th scope="col">{{'vocab.desc' | translate}}</th>
   <th scope="col">{{'vocab.price' | translate}}</th>
-  <th scope="col">{{'vocab.seller' | translate}}</th>
+  <th *ngIf="loggedIn" scope="col">{{'vocab.seller' | translate}}</th>
   <th scope="col">{{'vocab.availability' | translate}}</th>
-  <th scope="col">{{'vocab.details' | translate}}</th>
-  <th scope="col">{{'vocab.edit' | translate}}</th>
-  <th scope="col">{{'vocab.delete' | translate}}</th>
+  <th *ngIf="loggedIn" scope="col">{{'vocab.details' | translate}}</th>
   </thead>
   <tbody>
   <tr *ngFor="let product of products">
@@ -20,12 +18,11 @@
     <td>{{product.name}}</td>
     <td>{{product.description}}</td>
     <td>{{product.price}}</td>
-    <td>{{product.seller.login}}</td>
-    <td *ngIf="product.available"><a *ngIf="currentUser" (click)="addToCart(product.id)"><i class="fas fa-cart-plus"></i></a></td>
-    <td *ngIf="!product.available">-</td>
-    <td><a routerLink="/products/{{product.id}}"><i class="fas fa-info-circle"></i></a></td>
-    <td><a routerLink="/products/edit/{{product.id}}"><i class="fas fa-edit"></i></a></td>
-    <td><a routerLink="/products/delete/{{product.id}}"><i class="fas fa-trash-alt"></i></a></td>
+    <td *ngIf="loggedIn">{{product.seller.login}}</td>
+    <td *ngIf="product.available && !loggedIn"><i class="fas fa-cart-plus"></i></td>
+    <td *ngIf="product.available && loggedIn"><a (click)="addToCart(product.id)"><i class="fas fa-cart-plus"></i></a></td>
+    <td *ngIf="!product.available"></td>
+    <td *ngIf="loggedIn"><a routerLink="products/{{product.id}}"><i class="fas fa-info-circle"></i></a></td>
   </tr>
   </tbody>
 </table>

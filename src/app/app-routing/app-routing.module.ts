@@ -32,7 +32,7 @@ const appRoutes: Routes = [
   { path: 'users/edit/:id', component: UserEditComponent, canActivate: [AuthGuard]},
   { path: 'users/delete/:id', component: UserDeleteComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin]} },
   { path: 'users/activate/:id', component: UserActivationComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin]} },
-  { path: 'products', component: ProductListComponent, canActivate: [AuthGuard]},
+  { path: 'products', component: ProductListComponent},
   { path: 'products-json', component: ProductJsonComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin]}},
   { path: 'products-users/:id', component: UsersProductsComponent, canActivate: [AuthGuard]},
   { path: 'products/:id', component: ProductDetailsComponent},

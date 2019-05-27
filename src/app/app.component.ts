@@ -13,6 +13,7 @@ import {User} from './models/user';
 export class AppComponent {
   title = 'Connect.com';
   currentUser: User;
+  loggedIn = false;
 
   constructor(private http: HttpClient,
               private translate: TranslateService,
@@ -21,6 +22,7 @@ export class AppComponent {
     translate.setDefaultLang('en');
     this.authService.currentUser.subscribe(x => this.currentUser = x);
   }
+
 
   logout() {
     console.log(this.currentUser);

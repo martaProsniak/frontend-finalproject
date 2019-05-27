@@ -7,7 +7,7 @@ td a{
   color: #474647;
 }
 
-td a:hover, i:hover{
+td a:hover, a:hover{
   text-decoration: none;
   cursor: pointer;
   color: #3ED682;
@@ -15,4 +15,6 @@ td a:hover, i:hover{
 td, th {
   text-align: center;
 }
+
+
 
