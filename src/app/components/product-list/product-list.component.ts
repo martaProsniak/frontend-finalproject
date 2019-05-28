@@ -20,7 +20,6 @@ export class ProductListComponent implements OnInit {
   products: Product[];
   currentUser: User;
   loggedIn = false;
-  isSeller;
 
 
   constructor(private productService: ProductsService,
@@ -64,7 +63,7 @@ export class ProductListComponent implements OnInit {
     this.cartService.addToCart(userId, productId, cart)
       .subscribe(result =>
         this.currentUser.cart = result);
-    console.log('success');
+    alert('Added to cart!');
     this.ngOnInit();
   }
 

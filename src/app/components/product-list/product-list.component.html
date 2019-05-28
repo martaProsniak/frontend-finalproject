@@ -8,7 +8,6 @@
   <th scope="col">{{'vocab.price' | translate}}</th>
   <th *ngIf="loggedIn" scope="col">{{'vocab.seller' | translate}}</th>
   <th scope="col">{{'vocab.availability' | translate}}</th>
-  <th *ngIf="loggedIn" scope="col">{{'vocab.details' | translate}}</th>
   </thead>
   <tbody>
   <tr *ngFor="let product of products">
@@ -19,12 +18,9 @@
     <td>{{product.description}}</td>
     <td>{{product.price}}</td>
     <td *ngIf="loggedIn">{{product.seller.login}}</td>
-
     <td *ngIf="product.available && !loggedIn"><i class="fas fa-cart-plus"></i></td>
     <td *ngIf="product.available && loggedIn && !(product.seller.login === currentUser.login)"><a (click)="addToCart(product.id)"><i class="fas fa-cart-plus"></i></a></td>
     <td *ngIf="!product.available || (loggedIn && product.seller.login === currentUser.login)"></td>
-
-    <td *ngIf="loggedIn"><a routerLink="products/{{product.id}}"><i class="fas fa-info-circle"></i></a></td>
   </tr>
   </tbody>
 </table>

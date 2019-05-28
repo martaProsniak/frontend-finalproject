@@ -17,7 +17,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { UserAddComponent } from './components/user-add/user-add.component';
 import { UserDeleteComponent } from './components/user-delete/user-delete.component';
 import { UserActivationComponent } from './components/user-activation/user-activation.component';
-import { HomeComponent } from './components/home/home.component';
+import { NoAuthComponent } from './components/no-auth/no-auth.component';
 import { ProductAddComponent } from './components/product-add/product-add.component';
 import { LoginComponent } from './components/login/login.component';
 import { ProductEditComponent } from './components/product-edit/product-edit.component';
@@ -43,7 +43,7 @@ import { OrderComponent } from './components/order/order.component';
     UserAddComponent,
     UserDeleteComponent,
     UserActivationComponent,
-    HomeComponent,
+    NoAuthComponent,
     ProductAddComponent,
     LoginComponent,
     ProductEditComponent,

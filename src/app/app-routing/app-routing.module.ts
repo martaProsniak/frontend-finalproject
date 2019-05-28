@@ -9,7 +9,7 @@ import {ProductDetailsComponent} from '../components/product-details/product-det
 import {UserAddComponent} from '../components/user-add/user-add.component';
 import {UserDeleteComponent} from '../components/user-delete/user-delete.component';
 import {UserActivationComponent} from '../components/user-activation/user-activation.component';
-import {HomeComponent} from '../components/home/home.component';
+import {NoAuthComponent} from '../components/no-auth/no-auth.component';
 import {ProductAddComponent} from '../components/product-add/product-add.component';
 import {LoginComponent} from '../components/login/login.component';
 import {UsersProductsComponent} from '../components/users-products/users-products.component';
@@ -23,24 +23,23 @@ import {Role} from '../models/role';
 
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent},
+  { path: '', component: NoAuthComponent},
   { path: 'users', component: UsersListComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin]}},
   { path: 'login', component: LoginComponent},
+  { path: 'products', component: ProductListComponent},
   { path: 'register', component: UserAddComponent},
   { path: 'users-add', component: UserAddComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin]}},
   { path: 'users/:id', component: UserDetailsComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin]}},
   { path: 'users/edit/:id', component: UserEditComponent, canActivate: [AuthGuard]},
   { path: 'users/delete/:id', component: UserDeleteComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin]} },
   { path: 'users/activate/:id', component: UserActivationComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin]} },
-  { path: 'products', component: ProductListComponent},
   { path: 'products-json', component: ProductJsonComponent, canActivate: [AuthGuard], data: { roles: [Role.Admin]}},
   { path: 'products-users/:id', component: UsersProductsComponent, canActivate: [AuthGuard]},
-  { path: 'products/:id', component: ProductDetailsComponent},
-  { path: 'products-add', component: ProductAddComponent},
-  { path: 'products/edit/:id', component: ProductEditComponent},
-  { path: 'products/delete/:id', component: ProductDeleteComponent },
-  { path: 'cart/users/:id', component: CartComponent},
-  { path: 'order/add', component: OrderComponent},
+  { path: 'products-add', component: ProductAddComponent, canActivate: [AuthGuard]},
+  { path: 'products/edit/:id', component: ProductEditComponent, canActivate: [AuthGuard]},
+  { path: 'products/delete/:id', component: ProductDeleteComponent, canActivate: [AuthGuard] },
+  { path: 'cart/users/:id', component: CartComponent, canActivate: [AuthGuard]},
+  { path: 'order/add', component: OrderComponent, canActivate: [AuthGuard]},
   { path: '**', redirectTo: ''}
 ];
 

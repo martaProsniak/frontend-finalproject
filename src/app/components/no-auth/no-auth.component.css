@@ -17,3 +17,11 @@ article{
   color: #474647;
   font-family: 'Sniglet', cursive;
 }
+p{
+  font-size: 1.5em;
+  margin: 1em auto auto auto;
+  height: 28px;
+  width: fit-content;
+  color: #474647;
+  font-family: 'Sniglet', cursive;
+}

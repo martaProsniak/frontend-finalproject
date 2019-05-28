@@ -3,10 +3,10 @@ import {HomeService} from '../../_services/home.service';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  templateUrl: './no-auth.component.html',
+  styleUrls: ['./no-auth.component.css']
 })
-export class HomeComponent implements OnInit {
+export class NoAuthComponent implements OnInit {
 
   constructor(private homeService: HomeService) { }
 

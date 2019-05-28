@@ -34,6 +34,7 @@ export class UserEditComponent implements OnInit {
           this.user = user;
         }
       );
+    alert('Changes saved!');
   }
 
   goBack(): void {
