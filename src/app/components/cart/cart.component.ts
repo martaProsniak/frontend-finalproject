@@ -8,6 +8,11 @@ import {UsersService} from '../../_services/users.service';
 import {Router} from '@angular/router';
 import {isObject} from 'rxjs/internal-compatibility';
 
+/**
+ * @author Marta Prosniak
+ * User cart frontend representation
+ */
+
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',

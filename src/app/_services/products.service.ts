@@ -3,6 +3,11 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Product} from '../models/product';
 
+/**
+ * @author Marta Prosniak
+ * products service to manage products accessed by API
+ */
+
 @Injectable({
   providedIn: 'root'
 })

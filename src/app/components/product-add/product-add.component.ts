@@ -5,6 +5,11 @@ import {Product} from '../../models/product';
 import {AuthenticationService} from '../../_services/authentication.service';
 import {User} from '../../models/user';
 
+/**
+ * @author Marta Prosniak
+ * creates new products and sends it to API
+ */
+
 @Component({
   selector: 'app-product-add',
   templateUrl: './product-add.component.html',
@@ -24,11 +29,12 @@ export class ProductAddComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  // check if user is loggedin and gets current user id
   saveNewProduct() {
     this.authService.currentUser.subscribe(currentUser =>
       this.currentUser = currentUser);
     const userId = this.currentUser.id;
+    // post new product to API
     this.productsService.addNewProduct(this.product, userId)
       .subscribe(
         product => {

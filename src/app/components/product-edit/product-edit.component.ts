@@ -3,7 +3,11 @@ import {Product} from '../../models/product';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 import {ProductsService} from '../../_services/products.service';
-import {Cart} from '../../models/cart';
+
+/**
+ * @author Mateusz Kalwaj
+ * component to edit product
+ */
 
 @Component({
   selector: 'app-product-edit',
@@ -28,6 +32,7 @@ export class ProductEditComponent implements OnInit {
       });
   }
 
+  // saves user changes in database
   saveProductChanges() {
     this.productService.updateProduct(this.product)
       .subscribe(

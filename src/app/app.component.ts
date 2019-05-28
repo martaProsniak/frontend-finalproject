@@ -4,8 +4,11 @@ import {TranslateService} from '@ngx-translate/core';
 import {Router} from '@angular/router';
 import {AuthenticationService} from './_services/authentication.service';
 import {User} from './models/user';
-import {isObject} from 'rxjs/internal-compatibility';
-import {Role} from './models/role';
+
+/**
+ * @author Marta Prosniak
+ * Main application component
+ */
 
 @Component({
   selector: 'app-root',
@@ -25,17 +28,17 @@ export class AppComponent {
       this.currentUser = x;
     });
   }
-
+  // logouts user
   logout() {
     console.log(this.currentUser);
     this.authService.logout();
     this.router.navigate(['/login']);
   }
-
+  // translate application content to polish
   translatePl(): void {
     this.translate.setDefaultLang('pl');
   }
-
+  // translate application content to english
   translateEn(): void {
     this.translate.setDefaultLang('en');
   }

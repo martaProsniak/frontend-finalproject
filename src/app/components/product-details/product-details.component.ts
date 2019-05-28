@@ -4,6 +4,11 @@ import {Location} from '@angular/common';
 import {Product} from '../../models/product';
 import {ProductsService} from '../../_services/products.service';
 
+/**
+ * @author Marta
+ * gets info about specified product from API
+ */
+
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',

@@ -4,6 +4,11 @@ import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 import {User} from '../../models/user';
 
+/**
+ * @author Marta Prosniak
+ * delete user from database
+ */
+
 @Component({
   selector: 'app-user-delete',
   templateUrl: './user-delete.component.html',

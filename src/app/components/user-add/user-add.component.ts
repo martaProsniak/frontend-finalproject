@@ -4,6 +4,12 @@ import { Router} from '@angular/router';
 import {User} from '../../models/user';
 import { Location} from '@angular/common';
 
+/**
+ * @author Marta Prosniak
+ * adds new user to database
+ * available on /users-add and /register routes
+ */
+
 @Component({
   selector: 'app-user-add',
   templateUrl: './user-add.component.html',

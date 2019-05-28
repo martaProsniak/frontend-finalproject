@@ -8,7 +8,10 @@ import {CartService} from '../../_services/cart.service';
 import {Cart} from '../../models/cart';
 import {isObject} from 'rxjs/internal-compatibility';
 
-
+/**
+ * @author Marta Prosniak
+ * displays info about offered products and enable user actions
+ */
 
 @Component({
   selector: 'app-product-list',
@@ -34,9 +37,11 @@ export class ProductListComponent implements OnInit {
   }
 
   getProducts(): void {
+    // check if user is logged in
     if (isObject(this.currentUser)) {
       this.loggedIn = true;
     }
+    // gets products from API
     this.productService
       .getProductsTable()
       .subscribe(productList => {
@@ -50,7 +55,7 @@ export class ProductListComponent implements OnInit {
           }
         });
   }
-
+  // adds product to user cart
   addToCart(productId: number) {
     const userId = this.currentUser.id;
     let cart: Cart;

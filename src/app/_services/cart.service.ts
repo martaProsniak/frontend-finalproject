@@ -5,7 +5,7 @@ import {Cart} from '../models/cart';
 
 /**
  * @author Marta Prosniak
- * cart service to manage carts
+ * cart service to manage carts accessed by API
  */
 
 @Injectable({

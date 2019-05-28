@@ -6,6 +6,11 @@ import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 import {AuthenticationService} from '../../_services/authentication.service';
 
+/**
+ * @author Marta Prosniak
+ * displays products which current user sells
+ */
+
 @Component({
   selector: 'app-users-products',
   templateUrl: './users-products.component.html',

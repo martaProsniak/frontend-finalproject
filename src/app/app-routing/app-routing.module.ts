@@ -5,7 +5,6 @@ import {UserDetailsComponent} from '../components/user-details/user-details.comp
 import {UsersListComponent} from '../components/users-list/users-list.component';
 import {UserEditComponent} from '../components/user-edit/user-edit.component';
 import {ProductListComponent} from '../components/product-list/product-list.component';
-import {ProductDetailsComponent} from '../components/product-details/product-details.component';
 import {UserAddComponent} from '../components/user-add/user-add.component';
 import {UserDeleteComponent} from '../components/user-delete/user-delete.component';
 import {UserActivationComponent} from '../components/user-activation/user-activation.component';
@@ -21,6 +20,10 @@ import {OrderComponent} from '../components/order/order.component';
 import {AuthGuard} from '../_guards/auth-guard';
 import {Role} from '../models/role';
 
+/**
+ * @author Marta Prosniak
+ * routing module for declaring routes and user access
+ */
 
 const appRoutes: Routes = [
   { path: '', component: NoAuthComponent},

@@ -3,7 +3,11 @@ import {User} from '../../models/user';
 import {UsersService} from '../../_services/users.service';
 import {HttpErrorResponse} from '@angular/common/http';
 
-
+/**
+ * @author Marta Prosniak
+ * get all users from database
+ * restricted - route only for admins
+ */
 
 @Component({
   selector: 'app-users-list',
@@ -20,7 +24,7 @@ export class UsersListComponent implements OnInit {
   ngOnInit(): void {
     this.getUsers();
   }
-
+  // get users from database
   getUsers(): void {
     this.usersService
       .getUsersTable()

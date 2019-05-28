@@ -3,6 +3,11 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Order} from '../models/order';
 
+/**
+ * @author Marta Prosniak
+ * order service to manage orders accessed by api
+ */
+
 @Injectable({
   providedIn: 'root'
 })

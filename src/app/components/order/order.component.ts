@@ -2,11 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import {Cart} from '../../models/cart';
 import {CartService} from '../../_services/cart.service';
 import {AuthenticationService} from '../../_services/authentication.service';
-import {ActivatedRoute, Router} from '@angular/router';
+import {Router} from '@angular/router';
 import {User} from '../../models/user';
 import {isObject} from 'rxjs/internal-compatibility';
 import {Order} from '../../models/order';
 import {OrderService} from '../../_services/order.service';
+
+/**
+ * @author Marta Prosniak
+ * order component to create new order and send it to API
+ */
 
 @Component({
   selector: 'app-order',
@@ -32,6 +37,7 @@ export class OrderComponent implements OnInit {
   }
 
   ngOnInit() {
+    // check if user is logged in
     if (!isObject(this.authService.currentUser)) {
       this.loggedIn = false;
       this.router.navigate(['/login']);
@@ -42,13 +48,13 @@ export class OrderComponent implements OnInit {
       this.cart = this.currentUser.cart;
     }
   }
-
+  // create new order
   postOrder() {
     this.orderService.createOrder(this.createOrder())
       .subscribe(order => this.order = order);
   }
 
-
+  // set order fields
   createOrder(): Order {
     this.order = new Order();
     this.order.cart = this.currentUser.cart;

@@ -3,6 +3,10 @@ import {Product} from '../../models/product';
 import {ProductsService} from '../../_services/products.service';
 import {HttpErrorResponse} from '@angular/common/http';
 
+/**
+ * @author Marta Prosniak
+ * display all products in JSON
+ */
 
 @Component({
   selector: 'app-product-json',

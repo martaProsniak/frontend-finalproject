@@ -6,6 +6,11 @@ import { Location} from '@angular/common';
 import {Product} from '../../models/product';
 import {AuthenticationService} from '../../_services/authentication.service';
 
+/**
+ * @author Marta Prosniak
+ * get user details from API and display it
+ */
+
 @Component({
   selector: 'app-user-details',
   templateUrl: './user-details.component.html',

@@ -5,6 +5,11 @@ import {Location} from '@angular/common';
 import {Router} from '@angular/router';
 import {AuthenticationService} from '../../_services/authentication.service';
 
+/**
+ * @author Marta Prosniak
+ * login component to user login
+ */
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',

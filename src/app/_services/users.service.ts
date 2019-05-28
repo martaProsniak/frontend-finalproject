@@ -3,6 +3,10 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {User} from '../models/user';
 import {Observable} from 'rxjs';
 
+/**
+ * @author Marta Prosniak
+ * users service to manage users accessed by API
+ */
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +14,6 @@ import {Observable} from 'rxjs';
 export class UsersService {
 
   endpoint = 'http://localhost:8080/users';
-
-  headers = new HttpHeaders({'Content-Type':  'application/json'});
 
   constructor(private http: HttpClient) { }
 

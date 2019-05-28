@@ -10,6 +10,7 @@ import {isObject} from 'rxjs/internal-compatibility';
  * @author Marta Prosniak
  * Authentication guard to verify user access
  */
+
 @Injectable({ providedIn: 'root' })
 export class AuthGuard implements CanActivate {
 

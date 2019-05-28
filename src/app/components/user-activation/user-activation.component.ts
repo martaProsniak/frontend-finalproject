@@ -4,6 +4,10 @@ import {UsersService} from '../../_services/users.service';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 
+/**
+ * @author Marta
+ * activates user
+ */
 
 @Component({
   selector: 'app-user-activation',
@@ -28,8 +32,7 @@ export class UserActivationComponent implements OnInit {
         isAccepted = this.user.accepted;
         if (!isAccepted) {
           this.activate();
-        } else if (isAccepted) {
-          this.deactivate();}
+        }
       });
   }
 
@@ -42,12 +45,6 @@ export class UserActivationComponent implements OnInit {
         .activate(this.user)
         .subscribe(result => this.user = result);
     }
-
-  deactivate(): void {
-    this.usersService
-      .deactivate(this.user)
-      .subscribe(result => this.user = result);
-  }
   }
 
 

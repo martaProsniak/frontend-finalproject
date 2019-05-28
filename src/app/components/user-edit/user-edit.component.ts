@@ -4,6 +4,11 @@ import {UsersService} from '../../_services/users.service';
 import {ActivatedRoute} from '@angular/router';
 import { Location} from '@angular/common';
 
+/**
+ * @author Marta Prosniak
+ * allow user editing
+ */
+
 @Component({
   selector: 'app-user-edit',
   templateUrl: './user-edit.component.html',
@@ -17,6 +22,7 @@ export class UserEditComponent implements OnInit {
               private route: ActivatedRoute,
               private location: Location) { }
 
+  // get user details
   ngOnInit() {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.usersService
@@ -26,7 +32,7 @@ export class UserEditComponent implements OnInit {
       });
 
   }
-
+  // save user changes in database
   saveUserChanges() {
     this.usersService.updateUser(this.user)
       .subscribe(
