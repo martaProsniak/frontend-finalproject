@@ -6,7 +6,7 @@
     </label>
   </div>
   <div>
-    <label>{{'vocab.postcode' | translate}}:
+    <label>{{'vocab.post' | translate}}:
       <input [(ngModel)]="postcode" placeholder="{{'vocab.post' | translate}}"/>
     </label>
   </div>
@@ -20,7 +20,7 @@
       <input [(ngModel)]="country" placeholder="{{'vocab.country' | translate}}"/>
     </label>
   </div>
-  <button (click)="postOrder()">{{'vocab.save-changes' | translate}}</button>
+  <button (click)="postOrder()">{{'vocab.order-create' | translate}}</button>
 </div>
 <div id="button-container">
   <button class="back" (click)="goBack()">{{'vocab.back' | translate}}</button>

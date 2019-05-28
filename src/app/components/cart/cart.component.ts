@@ -7,6 +7,7 @@ import {User} from '../../models/user';
 import {UsersService} from '../../_services/users.service';
 import {Router} from '@angular/router';
 import {isObject} from 'rxjs/internal-compatibility';
+import {Location} from '@angular/common';
 
 /**
  * @author Marta Prosniak
@@ -29,7 +30,8 @@ export class CartComponent implements OnInit {
   constructor(private cartService: CartService,
               private usersService: UsersService,
               private authService: AuthenticationService,
-              private router: Router) {
+              private router: Router,
+              private location: Location) {
   }
 
   ngOnInit() {
@@ -53,5 +55,9 @@ export class CartComponent implements OnInit {
       .subscribe(cart => this.cart = cart);
     alert('Removed from cart!');
     this.ngOnInit();
+  }
+
+  goBack(): void {
+    this.location.back();
   }
 }

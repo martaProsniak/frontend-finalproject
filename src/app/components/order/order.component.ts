@@ -7,6 +7,7 @@ import {User} from '../../models/user';
 import {isObject} from 'rxjs/internal-compatibility';
 import {Order} from '../../models/order';
 import {OrderService} from '../../_services/order.service';
+import { Location} from '@angular/common';
 
 /**
  * @author Marta Prosniak
@@ -32,7 +33,8 @@ export class OrderComponent implements OnInit {
   constructor(private cartService: CartService,
               private authService: AuthenticationService,
               private orderService: OrderService,
-              private router: Router) {
+              private router: Router,
+              private location: Location) {
     this.order = new Order();
   }
 
@@ -52,6 +54,8 @@ export class OrderComponent implements OnInit {
   postOrder() {
     this.orderService.createOrder(this.createOrder())
       .subscribe(order => this.order = order);
+    alert('Order recieved!');
+    this.router.navigate(['/products']);
   }
 
   // set order fields
@@ -65,4 +69,7 @@ export class OrderComponent implements OnInit {
     return this.order;
   }
 
+  goBack(): void {
+    this.location.back();
+  }
 }

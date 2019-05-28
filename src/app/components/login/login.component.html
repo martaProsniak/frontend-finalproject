@@ -2,7 +2,7 @@
   <div class="login">
     <label>
       <p>Login:</p>
-      <input [(ngModel)]="user.login" placeholder="login"/>
+      <input [(ngModel)]="user.login" placeholder="Login"/>
     </label>
   </div>
   <div>
@@ -14,7 +14,5 @@
   <button (click)="login()">{{ 'vocab.log' | translate }}</button>
   <button routerLink="/register">{{ 'vocab.sign-up' | translate }}</button>
 </div>
-<div id="button-container">
-  <button class="back" (click)="goBack()">{{ 'vocab.back' | translate }}</button>
-</div>
+<div id="button-container"></div>
 
