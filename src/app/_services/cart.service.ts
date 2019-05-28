@@ -3,6 +3,11 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Cart} from '../models/cart';
 
+/**
+ * @author Marta Prosniak
+ * cart service to manage carts
+ */
+
 @Injectable({
   providedIn: 'root'
 })

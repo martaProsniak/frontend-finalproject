@@ -6,6 +6,10 @@ import {map} from 'rxjs/operators';
 import { CookieService} from 'ngx-cookie-service';
 import {Router} from '@angular/router';
 
+/**
+ * @author Marta Prosniak
+ * Authentication service to authenticate user
+ */
 @Injectable({
   providedIn: 'root'
 })
@@ -13,6 +17,7 @@ export class AuthenticationService {
 
   host = 'http://localhost:8080/';
 
+  // current user as observable
   private currentUserSubject: BehaviorSubject<any>;
   public currentUser: Observable<any>;
 
@@ -25,22 +30,25 @@ export class AuthenticationService {
     cookieService.set('currentUser', currentSession);
   }
 
-  public get currentUserValue() {
-    return this.currentUserSubject.value;
-  }
-
+  // login method
   login(user: User): Observable<any> {
     return this.http.post(this.host + 'login', user)
       .pipe(map(currentUser => {
         this.cookieService.set('currentUser', JSON.stringify(currentUser));
         this.currentUserSubject.next(currentUser);
         return currentUser;
-  }));
+      }));
   }
+
+  // logout method
   logout() {
-    this.currentUserSubject.next(null);
     this.cookieService.delete('currentUser');
-    this.router.navigate(['/login']);
+    this.currentUserSubject.next(null);
   }
+
+  public get currentUserValue() {
+    return this.currentUserSubject.value;
+  }
+
 }
 

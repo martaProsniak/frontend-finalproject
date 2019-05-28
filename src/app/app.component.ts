@@ -29,7 +29,7 @@ export class AppComponent {
   logout() {
     console.log(this.currentUser);
     this.authService.logout();
-    this.router.initialNavigation();
+    this.router.navigate(['/login']);
   }
 
   translatePl(): void {
