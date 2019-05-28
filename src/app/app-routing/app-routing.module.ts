@@ -43,7 +43,7 @@ const appRoutes: Routes = [
   { path: 'products/delete/:id', component: ProductDeleteComponent, canActivate: [AuthGuard] },
   { path: 'cart/users/:id', component: CartComponent, canActivate: [AuthGuard]},
   { path: 'order/add', component: OrderComponent, canActivate: [AuthGuard]},
-  { path: '**', redirectTo: ''}
+  { path: '**', redirectTo: '/login'}
 ];
 
 @NgModule({
