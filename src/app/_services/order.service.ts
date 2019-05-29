@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Order} from '../models/order';
-import {Product} from '../models/product';
 
 /**
  * @author Marta Prosniak
@@ -14,17 +13,17 @@ import {Product} from '../models/product';
 })
 export class OrderService {
 
-  endpoint = 'http://localhost:8080/orders';
+  endpoint = 'http://localhost:8080/orders/';
 
   constructor(private http: HttpClient) {}
 
   createOrder(cartId: number, order: Order): Observable<any> {
-    return this.http.post(this.endpoint + '/add/cart/' + cartId, order);
+    return this.http.post(this.endpoint + 'add/cart/' + cartId, order);
   }
 
-  getOrdersTable(): Observable<Order[]> {
+  getOrdersTable(id: number): Observable<any> {
     return this.http
-      .get<Order[]>(this.endpoint + '/');
+      .get<Order[]>(this.endpoint + 'user/' + id);
   }
 
 }

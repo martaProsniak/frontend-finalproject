@@ -29,12 +29,13 @@ export class ProductAddComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  // check if user is loggedin and gets current user orderid
+  // check if user is loggedin and gets current user id
   saveNewProduct() {
     this.authService.currentUser.subscribe(currentUser =>
       this.currentUser = currentUser);
     const userId = this.currentUser.id;
     // post new product to API
+    this.product.cart = null;
     this.productsService.addNewProduct(this.product, userId)
       .subscribe(
         product => {

@@ -40,7 +40,7 @@ export class OrderListComponent implements OnInit {
     }
     // gets orders from API
     this.orderService
-      .getOrdersTable()
+      .getOrdersTable(this.currentUser.id)
       .subscribe(ordersList => {
         this.orders = ordersList;
       },

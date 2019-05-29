@@ -30,7 +30,7 @@ export class UserDetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    const id = Number(this.route.snapshot.paramMap.get('orderid'));
+    const id = Number(this.route.snapshot.paramMap.get('id'));
     this.usersService
       .getUserDetails(id)
       .subscribe(result => {

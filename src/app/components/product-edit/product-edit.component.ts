@@ -24,7 +24,7 @@ export class ProductEditComponent implements OnInit {
   }
 
   ngOnInit() {
-    const id = Number(this.route.snapshot.paramMap.get('orderid'));
+    const id = Number(this.route.snapshot.paramMap.get('id'));
     this.productService
       .getProductDetails(id)
       .subscribe(result => {
