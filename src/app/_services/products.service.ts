@@ -22,6 +22,11 @@ export class ProductsService {
     return this.http
       .get<Product[]>(this.endpoint);
   }
+
+  getProductsTableForJson(): Observable<Product[]> {
+    return this.http
+      .get<Product[]>(this.endpoint + '/json');
+  }
   getProductDetails(id: number): Observable<Product> {
     return this.http
       .get<Product>(this.endpoint + '/' + id);

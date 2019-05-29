@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Product} from '../../models/product';
 import {ProductsService} from '../../_services/products.service';
 import {HttpErrorResponse} from '@angular/common/http';
+import {of} from 'rxjs';
 
 /**
  * @author Marta Prosniak
@@ -26,7 +27,7 @@ export class ProductJsonComponent implements OnInit {
 
   getProducts(): void {
     this.productService
-      .getProductsTable()
+      .getProductsTableForJson()
       .subscribe(productList => {
           this.products = productList;
         },
@@ -38,4 +39,5 @@ export class ProductJsonComponent implements OnInit {
           }
         });
   }
+
 }

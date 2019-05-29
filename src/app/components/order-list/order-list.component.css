@@ -15,9 +15,28 @@ td a:hover, i:hover{
 }
 td, th {
   text-align: center;
+  border: #474647 dotted 1px;
 }
 
 h3 {
   font-family: 'Sniglet', cursive;
   font-size: 1.5em;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: block;
+  font-family: 'Sniglet', cursive;
+  padding: 5px;
+  font-size: 1.5em;
+}
+
+ul li:first-child{
+  border-bottom: #474647 solid 3px;
+}
+article {
+
 }

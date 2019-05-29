@@ -7,7 +7,6 @@ import {isObject} from 'rxjs/internal-compatibility';
 import {HttpErrorResponse} from '@angular/common/http';
 import {Location} from '@angular/common';
 import {Router} from '@angular/router';
-import {Product} from '../../models/product';
 
 @Component({
   selector: 'app-order-list',
@@ -22,8 +21,7 @@ export class OrderListComponent implements OnInit {
 
   constructor(private orderService: OrderService,
               private authService: AuthenticationService,
-              private location: Location,
-              private router: Router) {
+              private location: Location) {
 
     this.authService.currentUser.subscribe(currentUser =>
       this.currentUser = currentUser);
