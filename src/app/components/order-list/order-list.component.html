@@ -1,1 +1,35 @@
-<p>works!</p>
+
+  <button *ngIf="loggedIn" routerLink="/order/add"><i class="fas fa-plus-circle"></i></button>
+  <h3>{{'vocab.orders-user' | translate}} {{currentUser.login}}</h3>
+  <div *ngFor="let order of orders">
+  <ul>
+    <li>Id: {{order.orderid}}</li>
+  <li>{{'vocab.address' | translate}}: {{order.address}}</li>
+
+  <li>{{'vocab.value' | translate}}: {{order.value}}</li>
+
+    <li>{{'vocab.items' | translate}} </li>
+
+    <table class="table table-striped">
+
+      <thead>
+
+    <th scope="col">{{'vocab.photo' | translate}}</th>
+    <th scope="col">{{'vocab.name' | translate}}</th>
+    <th scope="col">{{'vocab.desc' | translate}}</th>
+    <th scope="col">{{'vocab.price' | translate}}</th>
+    </thead>
+      <tbody>
+      <tr *ngFor="let item of order.items" >
+        <td><img [src]="item.url" ></td>
+        <td>{{item.name}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.price}}</td>
+      </tr>
+      </tbody>
+    </table>
+
+  </ul>
+  </div>
+<button class="back" (click)="goBack()">{{'vocab.back' | translate}}</button>
+

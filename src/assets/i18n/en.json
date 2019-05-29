@@ -6,10 +6,12 @@
 		"add": "Add",
     "add-to-cart": "Add to cart",
 		"add-new-product": "Add new product",
+    "address": "Address",
 		"admin": "Admin",
 		"availability": "Availability",
 		"available": "Available",
 		"back": "Back",
+    "buyer": "Buyer",
 		"calculate": "Calculate",
 		"cart": "Cart",
 		"cart-value": "Cart Value",
@@ -22,6 +24,7 @@
 		"edit": "Edit",
 		"eng": "English",
 		"hello": "Hello",
+    "items": "Items",
 		"language": "Language",
 		"log": "Log in",
 		"log-in": "Log in",
@@ -32,6 +35,7 @@
 		"no": "No",
     "no-auth": "No authorization",
 		"order": "Order",
+    "orders-user": "Orders of user",
     "order-create": "Create order",
 		"password": "Password",
 		"photo": "Photo",
@@ -56,6 +60,7 @@
 		"user-cart": "Cart of user",
 		"user-goods": "Goods of user",
 		"users": "Users",
+    "value": "Value",
 		"yes": "Yes"
 	}
 }

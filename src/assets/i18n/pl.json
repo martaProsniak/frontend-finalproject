@@ -6,10 +6,12 @@
 		"add": "Dodaj",
     "add-to-cart": "Dodaj do koszyka",
 		"add-new-product": "Dodaj nowy produkt",
+    "address": "Adres",
 		"admin": "Administrator",
 		"availability": "Dostępność",
 		"available": "Dostępny",
 		"back": "Wróć",
+    "buyer": "Kupujący",
 		"calculate": "Przelicz",
 		"cart": "Koszyk",
 		"cart-value": "Wartość koszyka",
@@ -22,6 +24,7 @@
 		"edit": "Edytuj",
 		"eng": "Angielski",
 		"hello": "Cześć",
+    "items": "Przedmioty",
 		"language": "Język",
 		"log": "Zaloguj",
 		"log-in": "Zaloguj",
@@ -33,6 +36,7 @@
     "no-auth": "Brak autoryzacji",
 		"order": "Zamówienie",
     "order-create": "Zamów",
+    "orders-user": "Zamówienia użytkownika",
 		"password": "Hasło",
 		"photo": "Zdjęcie",
 		"pl": "Polski",
@@ -56,6 +60,7 @@
 		"user-cart": "Koszyk użytkownika",
 		"user-goods": "Towary sprzedawcy",
 		"users": "Użytkownicy",
+    "value": "Wartość zamówienia",
 		"yes": "Tak"
 	}
 }

@@ -29,7 +29,7 @@ export class ProductAddComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  // check if user is loggedin and gets current user id
+  // check if user is loggedin and gets current user orderid
   saveNewProduct() {
     this.authService.currentUser.subscribe(currentUser =>
       this.currentUser = currentUser);

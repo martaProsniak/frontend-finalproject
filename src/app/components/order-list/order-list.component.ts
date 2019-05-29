@@ -7,6 +7,7 @@ import {isObject} from 'rxjs/internal-compatibility';
 import {HttpErrorResponse} from '@angular/common/http';
 import {Location} from '@angular/common';
 import {Router} from '@angular/router';
+import {Product} from '../../models/product';
 
 @Component({
   selector: 'app-order-list',

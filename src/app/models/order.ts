@@ -7,7 +7,7 @@ import {User} from './user';
  */
 
 export class Order {
-  id: number;
+  orderid: number;
   items: Product[];
   address: string;
   buyer: User;
