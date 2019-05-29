@@ -35,6 +35,7 @@ export class ProductAddComponent implements OnInit {
       this.currentUser = currentUser);
     const userId = this.currentUser.id;
     // post new product to API
+    this.product.cart = null;
     this.productsService.addNewProduct(this.product, userId)
       .subscribe(
         product => {
