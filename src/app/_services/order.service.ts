@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Order} from '../models/order';
+import {Product} from '../models/product';
 
 /**
  * @author Marta Prosniak
@@ -19,6 +20,11 @@ export class OrderService {
 
   createOrder(cartId: number, order: Order): Observable<any> {
     return this.http.post(this.endpoint + '/add/cart/' + cartId, order);
+  }
+
+  getOrdersTable(): Observable<Order[]> {
+    return this.http
+      .get<Order[]>(this.endpoint + '/');
   }
 
 }

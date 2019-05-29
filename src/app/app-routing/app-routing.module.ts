@@ -19,6 +19,7 @@ import {ProductJsonComponent} from '../components/product-json/product-json.comp
 import {OrderComponent} from '../components/order/order.component';
 import {AuthGuard} from '../_guards/auth-guard';
 import {Role} from '../models/role';
+import {OrderListComponent} from '../components/order-list/order-list.component';
 
 /**
  * @author Marta Prosniak
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
   { path: 'products-add', component: ProductAddComponent, canActivate: [AuthGuard]},
   { path: 'products/edit/:id', component: ProductEditComponent, canActivate: [AuthGuard]},
   { path: 'products/delete/:id', component: ProductDeleteComponent, canActivate: [AuthGuard] },
+  { path: 'orders/', component: OrderListComponent, canActivate: [AuthGuard]},
   { path: 'cart/users/:id', component: CartComponent, canActivate: [AuthGuard]},
   { path: 'order/add', component: OrderComponent, canActivate: [AuthGuard]},
   { path: '**', redirectTo: '/login'}

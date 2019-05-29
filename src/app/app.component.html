@@ -12,10 +12,12 @@
     </div>
   </div>
 </section>
+
 <h2 *ngIf="currentUser">
   <i class="fas fa-user-edit" routerLink="/users/edit/{{currentUser.id}}"></i>
   <i class="fas fa-store-alt" routerLink="/products-users/{{currentUser.id}}"></i>
   <i class="fas fa-cart-plus" routerLink="/cart/users/{{currentUser.id}}"></i>
+  <i routerLink="/orders/" class="fas fa-dolly"></i>
 </h2>
 <button class="pl" (click)="translatePl()">{{'vocab.pl' | translate}}</button>
 <button class="eng" (click)="translateEn()">{{'vocab.eng' | translate}}</button>

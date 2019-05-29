@@ -38,6 +38,7 @@ export class ProductDeleteComponent implements OnInit {
 
   // delete product from database
   deleteProduct(): void {
-    this.productService.delete(this.product).subscribe(result => this.deleted = true);
+    this.productService.delete(this.product)
+      .subscribe(result => this.deleted = true);
   }
 }

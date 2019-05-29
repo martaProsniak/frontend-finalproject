@@ -32,6 +32,7 @@ import {ProductJsonComponent} from './components/product-json/product-json.compo
 import {OrderComponent} from './components/order/order.component';
 import {AuthenticationService} from './_services/authentication.service';
 import {OrderService} from './_services/order.service';
+import { OrderListComponent } from './components/order-list/order-list.component';
 
 /**
  * @author Marta Prosniak
@@ -57,7 +58,8 @@ import {OrderService} from './_services/order.service';
     UsersProductsComponent,
     CartComponent,
     ProductJsonComponent,
-    OrderComponent
+    OrderComponent,
+    OrderListComponent
   ],
   imports: [
     BrowserModule,
