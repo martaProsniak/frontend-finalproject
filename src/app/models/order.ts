@@ -1,4 +1,5 @@
-import {Cart} from './cart';
+import {Product} from './product';
+import {User} from './user';
 
 /**
  * @author Marta Prosniak
@@ -7,8 +8,8 @@ import {Cart} from './cart';
 
 export class Order {
   id: number;
-  cart: Cart;
+  items: Product[];
   address: string;
-  login: string;
+  buyer: User;
   value: number;
 }

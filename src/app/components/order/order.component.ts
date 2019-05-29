@@ -52,7 +52,7 @@ export class OrderComponent implements OnInit {
   }
   // create new order
   postOrder() {
-    this.orderService.createOrder(this.createOrder())
+    this.orderService.createOrder(this.cart.id, this.createOrder())
       .subscribe(order => this.order = order);
     alert('Order recieved!');
     this.router.navigate(['/products']);
@@ -61,9 +61,9 @@ export class OrderComponent implements OnInit {
   // set order fields
   createOrder(): Order {
     this.order = new Order();
-    this.order.cart = this.currentUser.cart;
-    this.order.login = this.currentUser.login;
-    this.order.value = this.order.cart.cartValue;
+    this.order.items = this.cart.products;
+    this.order.buyer = this.cart.buyer;
+    this.order.value = this.cart.cartValue;
     this.order.address = this.street + ' ' + this.postcode + ' ' + this.town +
       ' ' + this.country;
     return this.order;
