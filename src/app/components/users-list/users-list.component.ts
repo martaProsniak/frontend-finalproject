@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {User} from '../../models/user';
 import {UsersService} from '../../_services/users.service';
 import {HttpErrorResponse} from '@angular/common/http';
+import {Location} from '@angular/common';
 
 /**
  * @author Marta Prosniak
@@ -18,7 +19,8 @@ export class UsersListComponent implements OnInit {
 
   users: User[];
 
-  constructor(private usersService: UsersService) {
+  constructor(private usersService: UsersService,
+              private location: Location) {
   }
 
   ngOnInit(): void {
@@ -38,5 +40,8 @@ export class UsersListComponent implements OnInit {
             console.log('Server-side error occured.');
           }
         });
+  }
+  goBack(): void {
+    this.location.back();
   }
 }
