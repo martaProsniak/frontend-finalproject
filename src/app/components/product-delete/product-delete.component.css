@@ -49,3 +49,7 @@ h2{
   border-radius: 5px;
   float: left;
 }
+img{
+  min-height: 160px;
+  min-width: 100px;
+}

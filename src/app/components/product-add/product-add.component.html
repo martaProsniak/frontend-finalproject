@@ -17,7 +17,10 @@
   </div>
   <div>
     <label>{{'vocab.available' | translate}}?
-      <input [(ngModel)]="product.available" placeholder="yes"/>
+      <select [(ngModel)]="product.available" name="available">
+        <option value="true">{{ 'vocab.yes' | translate }}</option>
+        <option value="false">{{ 'vocab.no' | translate }}</option>
+      </select>
     </label>
   </div>
   <div>
