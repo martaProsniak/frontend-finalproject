@@ -5,7 +5,6 @@
     <div><span>{{ 'vocab.name' | translate }}: </span>{{user.name}}</div>
     <div><span>{{ 'vocab.surname' | translate }}: </span>{{user.surname}}</div>
     <div><span>Login: </span>{{user.login}}</div>
-    <div><span>{{ 'vocab.password' | translate }}: </span><{{user.password}}</div>
     <div><span>{{ 'vocab.activated' | translate }}: </span>{{user.accepted}}</div>
     <div><span>{{ 'vocab.role' | translate }}: </span>{{user.role}}</div>
     <button (click)="deleteUser()">{{ 'vocab.delete' | translate }}</button>
@@ -13,7 +12,7 @@
 </div>
 
 <div *ngIf="deleted">
-  <div class="deleted">
+  <div class="deleted">ng
     {{ 'vocab.user' | translate }} {{user.id}} {{'vocab.deleted' | translate}}!
   </div>
 </div>
